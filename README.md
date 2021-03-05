@@ -1,4 +1,4 @@
-# 情報系資格試験支援サイト(仮) <br>IPEA：Information Processing Examinations Assistant
+#  Sea-Whale<br>Information Processing Examinations Assistant
 メンバー：小長谷、飯野
 
 # Market research：
