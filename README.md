@@ -22,12 +22,27 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 そうして、資格取得であったり、「成長」を感じつことができる状態で、実践環境に身を置くことができる。
 
 
-## コンテンツ内容
+## Contents
 - 気軽に投稿できるTwitterモデルの「呟き」
 - まとめや記事を作成する「スクラップ」
 - 自分の目指す資格の記録をする「ダイアリー」
 - プロフィール
+
 ※今後変更の可能性あり
+
+## Frameworks, Developement Languages
+### Framework
+- Laravel
+- Vue.js
+
+### Language
+- JavaScript
+- PHP
+- HTML/CSS
+
+### Cloud Computing Service
+- Amazon Web Service (AWS)
+
 
 
 ## Developmet Members　Profiles
