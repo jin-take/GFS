@@ -1,4 +1,12 @@
+<<<<<<< main
+## テスト【ローカルリポジトリで記載】
 
+#  Sea-Whale<br>Information Processing Examinations Assistant
+メンバー：小長谷、飯野
+=======
+# Sea-Whale
+プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う(個人開発)
+>>>>>>> main
 
 
 ### 現在の目標
