@@ -1,16 +1,15 @@
-<<<<<<< main
-## テスト【ローカルリポジトリで記載】
+# Sea-Whale
+Information Processing Examinations Assistant
 
-#  Sea-Whale<br>Information Processing Examinations Assistant
-メンバー：小長谷、飯野
-=======
+# Members
+小長谷、飯野
+
 # Sea-Whale
 プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う(個人開発)
->>>>>>> main
-
 
 ### 現在の目標
 ユーザ1000人
+
 #### 進行状況
 下記のURLにて確認<br>
 https://github.com/jin237/Sea-Whale_project/projects/1
