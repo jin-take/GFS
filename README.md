@@ -1,6 +1,8 @@
 # Sea-Whale
 Information Processing Examinations Assistant
 
+![sea-whale](https://user-images.githubusercontent.com/57553474/121203798-5b368b80-c8b1-11eb-9374-6b9c67e39991.jpeg)
+
 # Members
 小長谷、飯野
 
