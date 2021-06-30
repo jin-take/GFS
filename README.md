@@ -40,8 +40,7 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 ## Frameworks, Developement Languages
 ### Framework
-- Laravel
-- Vue.js
+- Django
 
 ### Language
 - JavaScript
