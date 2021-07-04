@@ -71,3 +71,5 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 #### たいせー
 本文
 
+## 環境構築手順
+https://www.notion.so/PC-54b90da196d24d5fb01b9a5779fc230b  
