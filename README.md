@@ -1,10 +1,15 @@
-# Sea-Whale
+# Sea-Whale（仮）
 Information Processing Examinations Assistant
 
 ![sea-whale](https://user-images.githubusercontent.com/57553474/121203798-5b368b80-c8b1-11eb-9374-6b9c67e39991.jpeg)
 
 # Members
-小長谷、飯野
+- Project Leader:こちょだに
+- Project sub-Leader:じん
+- Front-end Engineer:さくら
+- Back-end Engineer:もりもり本家
+- Back-end Engineer:もりもりwithH
+- Back-end Engineer:たいせー
 
 # Sea-Whale
 プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う(個人開発)
@@ -18,7 +23,7 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 
 ## Symbol Mark
-（画像）
+ムササビを元にした画像の用意
 
 
 ## Concept
@@ -31,9 +36,9 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 
 ## Contents
-- 気軽に投稿できるTwitterモデルの「呟き」
-- まとめや記事を作成する「スクラップ」
-- 自分の目指す資格の記録をする「ダイアリー」
+- 気軽に投稿できるTwitterモデルの「__ムルムル__」
+- まとめや記事を作成する「__スクラップ__」
+- 自分の目指す資格の記録をする「__ダイアリー__」
 - プロフィール
 
 ※今後変更の可能性あり
@@ -53,9 +58,16 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 
 ## Developmet Members　Profiles
-#### こな
+#### こちょだに
 本文
 #### じん
 本文
-
+#### さくら
+本文
+#### もりもり本家
+本文
+#### もりもりwithH
+本文
+#### たいせー
+本文
 
