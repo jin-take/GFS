@@ -43,8 +43,8 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 - Django
 
 ### Language
+- Python
 - JavaScript
-- PHP
 - HTML/CSS
 
 ### Cloud Computing Service
