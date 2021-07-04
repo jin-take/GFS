@@ -4,12 +4,12 @@ Information Processing Examinations Assistant
 ![sea-whale](https://user-images.githubusercontent.com/57553474/121203798-5b368b80-c8b1-11eb-9374-6b9c67e39991.jpeg)
 
 # Members
-- Project Leader:こちょだに
-- Project sub-Leader:じん
-- Front-end Engineer:さくら
-- Back-end Engineer:もりもり本家
-- Back-end Engineer:もりもりwithH
-- Back-end Engineer:たいせー
+- Project Leader::<br>こちょだに(https://github.com/kngy0306)
+- Project sub-Leader::<br>じん(https://github.com/jin237)
+- Front-end Engineer::<br>さくら(https://github.com/sakuraShimane)
+- Back-end Engineer::<br>もりもり本家(https://github.com/nodoka8)
+- Back-end Engineer::<br>もりもりwithH(https://github.com/OhyoriMasanobu)
+- Back-end Engineer::<br>たいせー(https://github.com/ebatyaso1228)
 
 # Sea-Whale
 プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う(個人開発)
