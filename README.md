@@ -1,13 +1,15 @@
 # GFS(じーふす)　by Kochodani　
 Information Processing Examinations Assistant Service
 
+![sea-whale](https://user-images.githubusercontent.com/57553474/121203798-5b368b80-c8b1-11eb-9374-6b9c67e39991.jpeg)
+
 # Members
-- Chief Executive Officer & Project Leader::<br>じん(https://github.com/jin237)
-- Chief Technology Officer::<br>こなゆう(https://github.com/kngy0306)
-- Front-end Engineer & Designer::<br>しまね(https://github.com/sakuraShimane)
-- Front-end Engineer & Back-end Engineer::<br>わたる(https://github.com/nodoka8)
-- Back-end Engineer & Infrastructure engineer::<br>もりもり(https://github.com/OhyoriMasanobu)
-- Back-end Engineer & Infrastructure engineer::<br>りゅうこく(https://github.com/ebatyaso1228)
+- Chief Executive Officer & Project Leader::<br>__じん__(https://github.com/jin237)
+- Chief Technology Officer::<br>__こなゆう__(https://github.com/kngy0306)
+- Front-end Engineer & Designer::<br>__しまね__(https://github.com/sakuraShimane)
+- Front-end Engineer & Back-end Engineer::__<br>__わたる(https://github.com/nodoka8)
+- Back-end Engineer & Infrastructure Engineer::<br>__もりもり__(https://github.com/OhyoriMasanobu)
+- Back-end Engineer & Infrastructure Engineer::<br>__りゅうこく__(https://github.com/ebatyaso1228)
 
 # Sea-Whale
 プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う(個人開発)
