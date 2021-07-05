@@ -7,7 +7,7 @@ Information Processing Examinations Assistant Service
 - Chief Executive Officer & Project Leader::<br>__じん__(https://github.com/jin237)
 - Chief Technology Officer::<br>__こなゆう__(https://github.com/kngy0306)
 - Front-end Engineer & Designer::<br>__しまね__(https://github.com/sakuraShimane)
-- Front-end Engineer & Back-end Engineer::__<br>__わたる(https://github.com/nodoka8)
+- Front-end Engineer & Back-end Engineer::<br>__わたる__(https://github.com/nodoka8)
 - Back-end Engineer & Infrastructure Engineer::<br>__もりもり__(https://github.com/OhyoriMasanobu)
 - Back-end Engineer & Infrastructure Engineer::<br>__りゅうこく__(https://github.com/ebatyaso1228)
 
