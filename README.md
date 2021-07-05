@@ -57,19 +57,19 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 
 
-## Developmet Members　Profiles
-#### こちょだに
-本文
+## Developmet Members Profiles
 #### じん
 本文
-#### さくら
+#### こなゆう
 本文
-#### もりもり本家
+#### しまね
 本文
-#### もりもりwithH
+#### わたる
 本文
-#### たいせー
+#### もりもり
+本文
+#### りゅうこく
 本文
 
-## 環境構築手順
+## 環境構築手順 by こなゆう
 https://www.notion.so/PC-54b90da196d24d5fb01b9a5779fc230b  
