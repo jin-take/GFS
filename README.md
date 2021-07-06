@@ -69,5 +69,9 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 #### りゅうこく
 本文
 
+## Roadmaps
+#### 画面遷移Roadmap
+<img src="https://github.com/jin237/GFS/blob/main/github_readme/GFS_Roadmap.png" height=300px>
+
 ## 環境構築手順 by こなゆう
 https://www.notion.so/PC-54b90da196d24d5fb01b9a5779fc230b  
