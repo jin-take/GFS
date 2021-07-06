@@ -59,7 +59,7 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 #### じん
 本文
 #### こなゆう
-本文
+https://kona4.com/page/about/
 #### しまね
 本文
 #### わたる
