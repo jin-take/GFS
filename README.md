@@ -4,10 +4,11 @@ Information Processing Examinations Assistant Service
 # Members
 - Chief Executive Officer & Project Leader::<br>__じん__(https://github.com/jin237)
 - Chief Technology Officer::<br>__こなゆう__(https://github.com/kngy0306)
-- Front-end Engineer & Designer::<br>__しまね__(https://github.com/sakuraShimane)
-- Front-end Engineer & Back-end Engineer::<br>__わたる__(https://github.com/nodoka8)
-- Back-end Engineer & Infrastructure Engineer::<br>__もりもり__(https://github.com/OhyoriMasanobu)
-- Back-end Engineer & Infrastructure Engineer::<br>__りゅうこく__(https://github.com/ebatyaso1228)
+- Front-end Engineer & Designer::<br>__さくら__(https://github.com/sakuraShimane)
+- Back-end Engineer & Infrastructure Engineer::<br>__わたる__(https://github.com/nodoka8)
+- Front-end Engineer & Back-end Engineer::<br>__もりもり__(https://github.com/OhyoriMasanobu)
+- Back-end Engineer & Infrastructure Engineer::<br>__えばちゃそ__(https://github.com/ebatyaso1228)
+- Project Manager：：<br>__れいごさん__
 
 # Sea-Whale
 プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う(個人開発)
@@ -57,16 +58,20 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 ## Developmet Members Profiles
 #### じん
-本文
+- 【Wix（My page）】->https://fgdaojebvoa237.wixsite.com/mysite
+- 【Note】->https://note.com/jin237
+- 【Twitter】->https://twitter.com/home?lang=ja
+- 【Facebook】->https://www.facebook.com/takehiro.iino.3/
+- 【Qiita】->https://qiita.com/jin237
 #### こなゆう
 https://kona4.com/page/about/
-#### しまね
+#### さくら
 本文
 #### わたる
 本文
 #### もりもり
 本文
-#### りゅうこく
+#### えばちゃそ
 本文
 
 ## Roadmaps
