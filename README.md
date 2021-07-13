@@ -81,5 +81,8 @@ https://kona4.com/page/about/
 ## 環境構築手順 by こなゆう
 https://www.notion.so/PC-54b90da196d24d5fb01b9a5779fc230b  
 
+## Gitを使用した開発フロー
+https://www.notion.so/Git-4f0b175fa5ff409c8cfa4e6ef8bcbd8e
+
 ## DB設計　初期バージョン 
 <img src="https://user-images.githubusercontent.com/57553474/125299744-65dab980-e364-11eb-95af-1bdbc352c747.png" height=300px>
