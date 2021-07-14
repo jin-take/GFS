@@ -1,0 +1,23 @@
+version: "3"
+services:
+  gfs-db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: django-db
+      MYSQL_USER: django
+      MYSQL_PASSWORD: django
+      TZ: "Asia/Tokyo"
+    volumes:
+      - /Users/jin237/gfs/project/GFS/app/db:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  gfs-web:
+    build: .
+    volumes:
+      - ./app:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - gfs-db
+    tty: true
