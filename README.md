@@ -79,7 +79,8 @@ https://kona4.com/page/about/
 <img src="https://github.com/jin237/GFS/blob/main/github_readme/GFS_Roadmap.png" height=300px>
 
 ## 環境構築手順 by こなゆう
-https://www.notion.so/PC-54b90da196d24d5fb01b9a5779fc230b  
+7/14追記: docker-compose を使用した開発に変更のためなし
+~~ https://www.notion.so/PC-54b90da196d24d5fb01b9a5779fc230b ~~
 
 ## Gitを使用した開発フロー
 https://www.notion.so/Git-4f0b175fa5ff409c8cfa4e6ef8bcbd8e
