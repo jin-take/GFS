@@ -15,7 +15,7 @@ services:
   gfs-web:
     build: .
     volumes:
-      - ./app:/app
+      - ./src:/app
     ports:
       - "8000:8000"
     depends_on:
