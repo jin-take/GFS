@@ -79,6 +79,8 @@ https://kona4.com/page/about/
 <img src="https://github.com/jin237/GFS/blob/main/github_readme/GFS_Roadmap.png" height=300px>
 
 ## 環境構築手順 by こなゆう
+https://daily-line-76f.notion.site/docker-compose-fb61da987ea94988a4cdaf66f7785a40  
+
 7/14追記: docker-compose を使用した開発に変更のため下記の構築手順使用しません  
 https://www.notion.so/PC-54b90da196d24d5fb01b9a5779fc230b
 
