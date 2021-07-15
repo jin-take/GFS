@@ -9,7 +9,7 @@ services:
       MYSQL_PASSWORD: django
       TZ: "Asia/Tokyo"
     volumes:
-      - /Users/jin237/gfs/project/GFS/app/db:/var/lib/mysql
+      - ./db:/var/lib/mysql
     ports:
       - "3306:3306"
   gfs-web:
