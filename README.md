@@ -1,4 +1,4 @@
-# GFS(じーふす)　by Kochodani　
+# GFS(じーふす)　by KOCHODANI
 Information Processing Examinations Assistant Service
 
 # Members
@@ -20,7 +20,10 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 
 ## Symbol Mark
-ムササビを元にした画像の用意
+ムササビを元にした画像の用意(作成中)
+
+## The Service Introduction Page
+https://determined-banach-55a167.netlify.app/ 
 
 
 ## Concept
@@ -54,7 +57,7 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 
 
-## Developmet Members Profiles
+## KOCHODANI Developmet Members Profiles
 #### じん
 - 【Wix（My page）】->https://fgdaojebvoa237.wixsite.com/mysite
 - 【Note】->https://note.com/jin237
