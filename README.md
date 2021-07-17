@@ -67,7 +67,8 @@ https://determined-banach-55a167.netlify.app/
 #### さくら
 本文
 #### わたる
-本文
+- 【Twitter】->https://twitter.com/nodonod8
+- 【Portforio】->https://fori.io/WataruOmori
 #### もりもり
 本文
 #### えばちゃそ
