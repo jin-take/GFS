@@ -3,12 +3,10 @@ Information Processing Examinations Assistant Service
 
 # Members
 - Chief Executive Officer & Project Leader::<br>__じん__(https://github.com/jin237)
-- Chief Technology Officer::<br>__こなゆう__(https://github.com/kngy0306)
 - Front-end Engineer & Designer::<br>__さくら__(https://github.com/sakuraShimane)
 - Back-end Engineer & Infrastructure Engineer::<br>__わたる__(https://github.com/nodoka8)
 - Front-end Engineer & Back-end Engineer::<br>__もりもり__(https://github.com/OhyoriMasanobu)
 - Back-end Engineer & Infrastructure Engineer::<br>__えばちゃそ__(https://github.com/ebatyaso1228)
-- Project Manager：：<br>__れいごさん__
 
 # Sea-Whale
 プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う(個人開発)
@@ -63,8 +61,6 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 - 【Twitter】->https://twitter.com/home?lang=ja
 - 【Facebook】->https://www.facebook.com/takehiro.iino.3/
 - 【Qiita】->https://qiita.com/jin237
-#### こなゆう
-https://kona4.com/page/about/
 #### さくら
 本文
 #### わたる
@@ -78,7 +74,7 @@ https://kona4.com/page/about/
 #### 画面遷移Roadmap
 <img src="https://github.com/jin237/GFS/blob/main/github_readme/GFS_Roadmap.png" height=300px>
 
-## 環境構築手順 by こなゆう
+## 環境構築手順
 https://daily-line-76f.notion.site/docker-compose-fb61da987ea94988a4cdaf66f7785a40  
 
 7/14追記: docker-compose を使用した開発に変更のため下記の構築手順使用しません  
