@@ -73,7 +73,7 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 - 【Twitter】->https://twitter.com/nodonod8
 - 【Portforio】->https://fori.io/WataruOmori
 #### もりもり
-本文
+- 【Facebook】->https://www.facebook.com/ohyori/
 #### えばちゃそ
 - 【Qiita】 ->https://qiita.com/ebatyaso1228
 
