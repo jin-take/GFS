@@ -65,7 +65,9 @@ https://determined-banach-55a167.netlify.app/
 - 【Facebook】->https://www.facebook.com/takehiro.iino.3/
 - 【Qiita】->https://qiita.com/jin237
 #### さくら
-本文
+- 【Git My Page】->https://sakurashimane.github.io/
+- 【Twitter】->https://twitter.com/shimanenosakura
+- 【Facebook】->https://www.facebook.com/sakura.nishikori
 #### わたる
 - 【Twitter】->https://twitter.com/nodonod8
 - 【Portforio】->https://fori.io/WataruOmori
