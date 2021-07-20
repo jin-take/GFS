@@ -1,5 +1,6 @@
 # GFS(じーふす)　by KOCHODANI
 Information Processing Examinations Assistant Service
+プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う
 
 # Members
 - Chief Executive Officer & Project Leader::<br>__じん__(https://github.com/jin237)
@@ -8,8 +9,6 @@ Information Processing Examinations Assistant Service
 - Front-end Engineer & Back-end Engineer::<br>__もりもり__(https://github.com/OhyoriMasanobu)
 - Back-end Engineer & Infrastructure Engineer::<br>__えばちゃそ__(https://github.com/ebatyaso1228)
 
-# Sea-Whale
-プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う(個人開発)
 
 ### 現在の目標
 ユーザ1000人
