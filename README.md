@@ -87,7 +87,9 @@ https://daily-line-76f.notion.site/docker-compose-fb61da987ea94988a4cdaf66f7785a
 https://www.notion.so/PC-54b90da196d24d5fb01b9a5779fc230b
 
 ## Gitを使用した開発フロー
-https://www.notion.so/Git-4f0b175fa5ff409c8cfa4e6ef8bcbd8e
+https://daily-line-76f.notion.site/Git-4f0b175fa5ff409c8cfa4e6ef8bcbd8e
+### Git、GitHubに関するまとめ
+https://mirror-summer-bcf.notion.site/Git-Git-Git-9a9417c1549d4a01b6dd4c0d3a88acef
 
 ## DB設計　初期バージョン 
 <img src="https://user-images.githubusercontent.com/57553474/125299744-65dab980-e364-11eb-95af-1bdbc352c747.png" height=300px>
