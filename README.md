@@ -23,7 +23,8 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 ムササビを元にした画像の用意(作成中)
 
 ## The Service Introduction Page
-https://determined-banach-55a167.netlify.app/ 
+- [【Main Page】](https://determined-banach-55a167.netlify.app/)
+- [【src Page in Github】](https://github.com/jin237/gfs_website)
 
 
 ## Concept
