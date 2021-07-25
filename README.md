@@ -1,5 +1,5 @@
 # GFS(じーふす)　by KOCHODANI
-Information Processing Examinations Assistant Service
+Information Processing Examinations Assistant Service<br>
 プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う
 
 # Members
@@ -45,7 +45,8 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 ## Frameworks, Developement Languages
 ### Framework
-- Django
+- Django(Python Framework)
+- Vue.js(JavaScript Framework)
 
 ### Language
 - Python
@@ -54,7 +55,6 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 ### Cloud Computing Service
 - Amazon Web Service (AWS)
-
 
 
 ## KOCHODANI Developmet Members Profiles
