@@ -1,17 +1,14 @@
-# GFS(じーふす)　by Kochodani　
-Information Processing Examinations Assistant Service
+# GFS(じーふす)　by KOCHODANI
+Information Processing Examinations Assistant Service<br>
+プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う
 
 # Members
 - Chief Executive Officer & Project Leader::<br>__じん__(https://github.com/jin237)
-- Chief Technology Officer::<br>__こなゆう__(https://github.com/kngy0306)
 - Front-end Engineer & Designer::<br>__さくら__(https://github.com/sakuraShimane)
 - Back-end Engineer & Infrastructure Engineer::<br>__わたる__(https://github.com/nodoka8)
 - Front-end Engineer & Back-end Engineer::<br>__もりもり__(https://github.com/OhyoriMasanobu)
 - Back-end Engineer & Infrastructure Engineer::<br>__えばちゃそ__(https://github.com/ebatyaso1228)
-- Project Manager：：<br>__れいごさん__
 
-# Sea-Whale
-プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う(個人開発)
 
 ### 現在の目標
 ユーザ1000人
@@ -22,7 +19,11 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 
 ## Symbol Mark
-ムササビを元にした画像の用意
+ムササビを元にした画像の用意(作成中)
+
+## The Service Introduction Page
+- [【Main Page】](https://determined-banach-55a167.netlify.app/)
+- [【src Page in Github】](https://github.com/jin237/gfs_website)
 
 
 ## Concept
@@ -44,7 +45,8 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 ## Frameworks, Developement Languages
 ### Framework
-- Django
+- Django(Python Framework)
+- Vue.js(JavaScript Framework)
 
 ### Language
 - Python
@@ -55,35 +57,39 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 - Amazon Web Service (AWS)
 
 
-
-## Developmet Members Profiles
+## KOCHODANI Developmet Members Profiles
 #### じん
 - 【Wix（My page）】->https://fgdaojebvoa237.wixsite.com/mysite
 - 【Note】->https://note.com/jin237
 - 【Twitter】->https://twitter.com/home?lang=ja
 - 【Facebook】->https://www.facebook.com/takehiro.iino.3/
 - 【Qiita】->https://qiita.com/jin237
-#### こなゆう
-https://kona4.com/page/about/
 #### さくら
-本文
+- 【Git My Page】->https://sakurashimane.github.io/
+- 【Twitter】->https://twitter.com/shimanenosakura
+- 【Facebook】->https://www.facebook.com/sakura.nishikori
 #### わたる
-本文
+- 【Twitter】->https://twitter.com/nodonod8
+- 【Portforio】->https://fori.io/WataruOmori
 #### もりもり
-本文
+- 【Facebook】->https://www.facebook.com/ohyori/
 #### えばちゃそ
-本文
+- 【Qiita】 ->https://qiita.com/ebatyaso1228
 
 ## Roadmaps
 #### 画面遷移Roadmap
 <img src="https://github.com/jin237/GFS/blob/main/github_readme/GFS_Roadmap.png" height=300px>
 
-## 環境構築手順 by こなゆう
+## 環境構築手順
+https://daily-line-76f.notion.site/docker-compose-fb61da987ea94988a4cdaf66f7785a40  
+
 7/14追記: docker-compose を使用した開発に変更のため下記の構築手順使用しません  
 https://www.notion.so/PC-54b90da196d24d5fb01b9a5779fc230b
 
 ## Gitを使用した開発フロー
-https://www.notion.so/Git-4f0b175fa5ff409c8cfa4e6ef8bcbd8e
+https://daily-line-76f.notion.site/Git-4f0b175fa5ff409c8cfa4e6ef8bcbd8e
+### Git、GitHubに関するまとめ
+https://mirror-summer-bcf.notion.site/Git-Git-Git-9a9417c1549d4a01b6dd4c0d3a88acef
 
 ## DB設計　初期バージョン 
 <img src="https://user-images.githubusercontent.com/57553474/125299744-65dab980-e364-11eb-95af-1bdbc352c747.png" height=300px>
