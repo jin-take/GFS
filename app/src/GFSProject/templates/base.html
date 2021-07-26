@@ -1,0 +1,14 @@
+{% load static %} 
+{# --- css --- #} 
+{% block extra_css %}
+{% endblock %}
+
+{% include '_message.html' %} 
+{% block content %}
+{% endblock %}
+
+
+{% if user.is_authenticated %} 
+ログアウト | プロフィール 
+{% endif %} 
+{# --- js --- #} 
