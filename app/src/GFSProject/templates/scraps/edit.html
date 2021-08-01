@@ -1,1 +1,10 @@
+{% extends 'base.html' %}
+
+{% block contents %}
 <p>scrapsの編集や削除を行う画面です</p>
+<a href={% url 'scraps:scraps_list' %}>listへ</a>
+<br>
+<a href={% url 'scraps:scraps_detail' %}>detailへ</a>
+<br>
+<a href={% url 'scraps:scraps_post' %}>postへ</a>
+{% endblock %}

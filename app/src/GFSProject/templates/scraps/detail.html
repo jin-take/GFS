@@ -1,1 +1,10 @@
+{% extends 'base.html' %}
+
+{% block contents %}
 <p>scrapsの詳細画面です</p>
+<a href={% url 'scraps:scraps_list' %}>listへ</a>
+<br>
+<a href={% url 'scraps:scraps_edit' %}>editへ</a>
+<br>
+<a href={% url 'scraps:scraps_post' %}>postへ</a>
+{% endblock %}

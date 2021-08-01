@@ -1,14 +1,36 @@
-{% load static %} 
-{# --- css --- #} 
-{% block extra_css %}
-{% endblock %}
+{% load static %}
 
-{% include '_message.html' %} 
-{% block content %}
-{% endblock %}
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GFS</title>
+  <link rel="stylesheet" href={% static 'css/base.css' %}>
+</head>
 
-{% if user.is_authenticated %} 
-ログアウト | プロフィール 
-{% endif %} 
-{# --- js --- #} 
+<body>
+  <header>
+    <div class="container">
+      <p>header</p>
+      {% if user.is_authenticated %}
+      ログアウト | プロフィール
+      {% endif %}
+      ログイン | 新規登録
+    </div>
+  </header>
+
+  <main>
+    {% block contents %}{% endblock %}
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>footer</p>
+    </div>
+  </footer>
+</body>
+
+</html>

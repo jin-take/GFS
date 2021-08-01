@@ -1,1 +1,10 @@
-<p>murmurの編集や削除を行う画面です</p>
+{% extends 'base.html' %}
+
+{% block contents %}
+<p>murmurの一覧画面です</p>
+<a href={% url 'murmur:murmur_detail' %}>detailへ</a>
+<br>
+<a href={% url 'murmur:murmur_edit' %}>editへ</a>
+<br>
+<a href={% url 'murmur:murmur_post' %}>postへ</a>
+{% endblock %}

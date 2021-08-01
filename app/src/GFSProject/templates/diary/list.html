@@ -1,1 +1,10 @@
+{% extends 'base.html' %}
+
+{% block contents %}
 <p>diary一覧の画面です</p>
+<a href={% url 'diary:diary_detail' %}>detailへ</a>
+<br>
+<a href={% url 'diary:diary_edit' %}>editへ</a>
+<br>
+<a href={% url 'diary:diary_post' %}>postへ</a>
+{% endblock %}
