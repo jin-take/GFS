@@ -1,1 +1,10 @@
+{% extends 'base.html' %}
+
+{% block contents %}
 <p>murmurの詳細画面です</p>
+<a href={% url 'murmur:murmur_list' %}>listへ</a>
+<br>
+<a href={% url 'murmur:murmur_edit' %}>editへ</a>
+<br>
+<a href={% url 'murmur:murmur_post' %}>postへ</a>
+{% endblock %}
