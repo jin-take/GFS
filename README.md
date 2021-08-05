@@ -1,4 +1,4 @@
-# GFS(じーふす)　by KOCHODANI
+# GFS(じーふす)　by Team Kochodani
 Information Processing Examinations Assistant Service<br>
 プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う
 
