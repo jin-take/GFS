@@ -43,6 +43,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'gfs.apps.GfsConfig',
+    'apps.accounts.apps.AccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -84,10 +85,25 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'GFSProject.wsgi.application'
+AUTH_USER_MODEL = 'accounts.User'
 
+# メールをコンソールに表示する
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# メールサーバーへの接続設定
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'gfskotyodani@gmail.com'
+EMAIL_HOST_PASSWORD = 'kotyodani'
+EMAIL_USE_TLS = True
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'profile'
+LOGOUT_REDIRECT_URL = 'login'
+
 
 DATABASES = {
     'default': {
@@ -97,7 +113,7 @@ DATABASES = {
         'PASSWORD': 'django',
         'HOST': 'gfs-db',
         'PORT': '3306'
-    }
+    },
 }
 
 
