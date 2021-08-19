@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <!-- 左側、ログインエリア -->
+    <div class="card col-md-6">
+        <div class="card-body">
+            <form action="{% url 'login' %}" method="POST">
+                {{ form.non_field_errors }}
+                {% for field in form %}
+                    {{ field }}
+                    {{ field.errors }}
+                    <hr>
+                {% endfor %}
+                <button type="submit" class="btn btn-success btn-lg btn-block" >ログイン</button>
+                <input type="hidden" name="next" value="{{ next }}" />
+                {% csrf_token %}
+            </form>
+        </div>
+    </div><!-- 左側、ログインエリアおわり -->
+
+    <!-- 右側、会員登録エリア -->
+    <div class="card col-md-6">
+        <div class="card-body">
+            <a href="{% url 'user_create' %}" class="btn btn-success btn-lg btn-block" >会員登録</a>
+        </div>
+    </div><!-- 右側、会員登録エリアおわり -->
+</div>
+{% endblock %}
