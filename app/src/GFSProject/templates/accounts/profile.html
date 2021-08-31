@@ -1,4 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-<p>プロフィール画面</p>
+<li>
+    <a class="nav-item nav-link" href="{% url 'profile_update' user.profile.pk %}">ユーザー情報更新</a>
+</li>
+<table class="table">
+    <tbody>
+        <tr>
+            <th>メールアドレス</th>
+            <td>{{ user.email }}</td>
+        </tr>
+        <tr>
+            <th>姓</th>
+            <td>{{ user.last_name }}</td>
+        </tr>
+        <tr>
+            <th>名</th>
+            <td>{{ user.first_name }}</td>
+        </tr>
+        <tr>
+            <th>name</th>
+            <td>{{ user.profile.name }}</td>
+        </tr>
+        <tr>
+            <th>自己紹介</th>
+            <td>{{ user.profile.introduce }}</td>
+        </tr>
+    </tbody>
+</table>
 {% endblock %}

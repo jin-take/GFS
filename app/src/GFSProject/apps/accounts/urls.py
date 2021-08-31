@@ -5,7 +5,8 @@ from GFSProject import views as topview
  
 urlpatterns = [
     path('', topview.index, name='index'),
-    path('accounts/profile/', views.Profile.as_view(), name='profile'),
+    path('profile/<int:pk>/', views.Profile.as_view(), name='profile'),
+    path('profile/profile_update/<int:pk>/', views.UserUpdate.as_view(), name='profile_update'),
     path('accounts/login/', views.Login.as_view(), name='login'),
     path('accounts/logout/', views.Logout.as_view(), name='logout'),
     path('accounts/user_create/', views.UserCreate.as_view(), name='user_create'),

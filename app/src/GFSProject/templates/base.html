@@ -14,6 +14,8 @@
 </head>
 
 <body>
+
+=======
   <!-- ナブバー -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="{% url 'index' %}">GFS</a>
@@ -25,6 +27,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         {% if user.is_authenticated %}
+        <li>
+          <a class="nav-item nav-link" href="{% url 'profile' user.pk %}">ユーザー情報閲覧</a>
+        </li>
         <li>
           <a class="nav-item nav-link" href="{% url 'logout' %}">ログアウト</a>
         </li>

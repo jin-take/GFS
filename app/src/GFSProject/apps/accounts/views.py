@@ -1,21 +1,30 @@
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.views import (
     LoginView, LogoutView
 )
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.signing import BadSignature, SignatureExpired, loads, dumps
 from django.http import Http404, HttpResponseBadRequest
-from django.shortcuts import redirect
+from django.shortcuts import redirect, resolve_url
 from django.template.loader import render_to_string
 from django.views import generic
 from .forms import (
-    LoginForm, UserCreateForm
+    LoginForm, ProfileForm,UserCreateForm, UserUpdateForm
 )
+from .models import Profile as ProfileModel
 
+class OnlyYouMixin(UserPassesTestMixin):
+    raise_exception = True
 
-class Profile(generic.TemplateView):
+    def test_func(self):
+        user = self.request.user
+        return user.pk == self.kwargs['pk'] or user.is_superuser
+
+class Profile(OnlyYouMixin, generic.DetailView):
+    context_object_name = 'profile'
+    model = get_user_model()
     template_name = 'accounts/profile.html'
 
 
@@ -23,6 +32,7 @@ class Login(LoginView):
     """ログインページ"""
     form_class = LoginForm
     template_name = 'accounts/login.html'
+
 
 
 class Logout(LogoutView):
@@ -102,3 +112,18 @@ class UserCreateComplete(generic.TemplateView):
                     return super().get(request, **kwargs)
 
         return HttpResponseBadRequest()
+
+
+class UserUpdate(generic.UpdateView):
+    model = ProfileModel
+    form_class = ProfileForm
+    template_name = 'accounts/user_form.html'
+    
+    def get_queryset(self):
+        return super().get_queryset().select_related('user')
+
+    def get_success_url(self):       
+        return resolve_url('profile', pk='1')
+        #return resolve_url('profile', pk= user.kwargs['pk'])
+
+    

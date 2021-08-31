@@ -1,9 +1,12 @@
 from django.db import models
 from django.core.mail import send_mail
+from django.conf import settings
 from django.contrib.auth.models import PermissionsMixin, UserManager
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class CustomUserManager(UserManager):
@@ -89,3 +92,21 @@ class User(AbstractBaseUser, PermissionsMixin):
         メールアドレスを返す
         """
         return self.email
+
+
+class Profile(models.Model):
+    
+    user = models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    name = models.CharField("ハンドルネーム", max_length=255)
+    #picture = models.ImageField(upload_to='profile_pictures', blank=True, null=True,)
+
+    introduce = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.name
+
+@receiver(post_save, sender=User)
+def create_profile(sender, **kwargs):
+    """ 新ユーザー作成時に空のprofileも作成する """
+    if kwargs['created']:
+        user_profile = Profile.objects.get_or_create(user=kwargs['instance'])

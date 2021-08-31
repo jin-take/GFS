@@ -99,7 +99,7 @@ EMAIL_USE_TLS = True
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'profile'
+LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'login'
 
 
@@ -110,8 +110,12 @@ DATABASES = {
         'USER': 'django',
         'PASSWORD': 'django',
         'HOST': 'gfs-db',
-        'PORT': '3306'
+        'PORT': '3306',
+        'OPTIONS': {
+            "init_command": "SET foreign_key_checks = 0;",
+        }
     },
+    
 }
 
 
