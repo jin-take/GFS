@@ -1,2 +1,10 @@
 *.DS_Store
 
+# cache
+__pycache__/
+
+# python
+*.pyc
+
+#db
+*.idb
