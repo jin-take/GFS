@@ -102,6 +102,7 @@ class UserCreateComplete(generic.TemplateView):
             try:
                 User = get_user_model()
                 user = User.objects.get(pk=user_pk)
+                # user = User.objects.get(pk=pk)
             except User.DoesNotExist:
                 return HttpResponseBadRequest()
             else:
@@ -118,12 +119,12 @@ class UserUpdate(generic.UpdateView):
     model = ProfileModel
     form_class = ProfileForm
     template_name = 'accounts/user_form.html'
-    
+    print(model.user)
     def get_queryset(self):
         return super().get_queryset().select_related('user')
 
     def get_success_url(self):       
-        return resolve_url('profile', pk='1')
-        #return resolve_url('profile', pk= user.kwargs['pk'])
+       # return resolve_url('profile', pk='1')
+        return resolve_url('profile', pk= self.request.user.pk)
 
     
