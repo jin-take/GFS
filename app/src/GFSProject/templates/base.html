@@ -15,7 +15,6 @@
 
 <body>
 
-=======
   <!-- ナブバー -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="{% url 'index' %}">GFS</a>
@@ -30,6 +29,7 @@
         <li>
           <a class="nav-item nav-link" href="{% url 'profile' user.pk %}">ユーザー情報閲覧</a>
         </li>
+    
         <li>
           <a class="nav-item nav-link" href="{% url 'logout' %}">ログアウト</a>
         </li>

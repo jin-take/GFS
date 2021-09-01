@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block content %}
+{% block contents %}
 <li>
-    <a class="nav-item nav-link" href="{% url 'profile_update' user.profile.pk %}">ユーザー情報更新</a>
+    <a class="nav-item nav-link" href="{% url 'profile_update' pk=user.profile.pk %}">ユーザー情報更新</a>
 </li>
 <table class="table">
     <tbody>
