@@ -1,4 +1,4 @@
-# GFS(じーふす)　by Team Kochodani
+# GFS(じーふす)　by Team KOCHODANI
 Information Processing Examinations Assistant Service<br>
 プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う
 
@@ -36,9 +36,9 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 
 ## Contents
-- 気軽に投稿できるTwitterモデルの「__ムルムル__」
-- まとめや記事を作成する「__スクラップ__」
-- 自分の目指す資格の記録をする「__ダイアリー__」
+- 気軽に投稿できるTwitterモデルの「__ムルムル(murmur)__」
+- イベントやTL会などを貼ることができる「__インフォメーション（information）__」
+- 一定のコミュニティを作ることができる「__コミュニティ(Community)__」
 - プロフィール
 
 ※今後変更の可能性あり
@@ -55,6 +55,7 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 ### Cloud Computing Service
 - Amazon Web Service (AWS)
+- Google Cloud Platform (GCP)
 
 
 ## KOCHODANI Developmet Members Profiles
@@ -98,9 +99,8 @@ https://mirror-summer-bcf.notion.site/Git-Git-Git-9a9417c1549d4a01b6dd4c0d3a88ac
 ## 基本機能について
 基本的な機能については以下の５つの項目で行う．
 - murmur（ムルムル）
-- scraps（スクラップ）
+- information（インフォメーション）
 - community（コミュニティ）
-- diary（ダイアリー）
 - profile（プロフィール）
 それぞれについてのデザインの仮案と詳細機能について記述を行う．
 
@@ -135,17 +135,6 @@ __＜フッター＞__
 - 共有：リンク取得，埋め込み，報告，広告，アナリティクス，ヘルプ
 ```
 
-##### scraps（スクラップ）：
-```markdown
-- 投稿の題目
-- 作成日
-- 投稿者（ID, top image, name）
-- Nice（いいね）：数，色
-- React（反応）：数，色
-- Quote（引用）：数，色
-- 共有：リンク取得，，コード引用，埋め込み，報告，広告，アナリティクス，ヘルプ
-```
-
 ##### community（コミュニティ）：
 ```markdown
 - チャンネル
@@ -158,17 +147,6 @@ __＜フッター＞__
 - React（反応）：数，色
 - Quote（引用）：数，色
 - 共有：リンク取得，コード引用，埋め込み，報告，広告，アナリティクス，ヘルプ
-```
-
-##### diary（ダイアリー）：
-```markdown
-- 書籍や教本，教材の登録
-- 手法
-- 体験記
-- 合格したかどうか
-- 目標設定
-- やったことの可視化（githubの草，AtCoderの色 etc. 日本のものなので冠位十二階とかの色を取り入れてもいいかもしれない）
-- ポートフォリオ的なものや合格したものの資格一覧やメダル
 ```
 
 ##### profile（プロフィール）：
