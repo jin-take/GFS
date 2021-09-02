@@ -127,4 +127,7 @@ class UserUpdate(generic.UpdateView):
        # return resolve_url('profile', pk='1')
         return resolve_url('profile', pk= self.request.user.pk)
 
+
+
+
     
