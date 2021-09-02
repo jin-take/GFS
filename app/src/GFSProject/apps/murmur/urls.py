@@ -15,4 +15,8 @@ urlpatterns = [
     path('post/new', views.MurmurPost.as_view(), name='murmur_post'),
     path('post/<int:pk>/', views.MurmurDetail.as_view(), name='murmur_detail'),
     path('user/<str:name>', views.UserPostListView.as_view(), name='user-posts'),
+    path('user/<str:name>/follows', views.FollowsListView.as_view(), name='user-follows'),
+    path('user/<str:name>/followers', views.FollowersListView.as_view(), name='user-followers'),
+    path('search/', views.SearchView, name='search'),
+
 ]   + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
