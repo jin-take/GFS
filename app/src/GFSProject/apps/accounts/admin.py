@@ -2,11 +2,16 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from django.utils.translation import ugettext_lazy as _
-from .models import User, Profile
+from .models import User, Profile, Follow
 
 
 class ProfileInline(admin.StackedInline):
     model = Profile
+    max_num = 1
+    can_delete = False
+
+class FollowInline(admin.StackedInline):
+    model = Follow
     max_num = 1
     can_delete = False
 
@@ -48,3 +53,4 @@ class MyUserAdmin(UserAdmin):
 
 
 admin.site.register(User, MyUserAdmin)
+admin.site.register(Follow)

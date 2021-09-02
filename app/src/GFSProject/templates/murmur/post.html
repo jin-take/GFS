@@ -1,10 +1,19 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
 {% block contents %}
-<p>murmurの投稿画面です</p>
-<a href={% url 'murmur:murmur_list' %}>listへ</a>
-<br>
-<a href={% url 'murmur:murmur_detail' %}>detailへ</a>
-<br>
-<a href={% url 'murmur:murmur_edit' %}>editへ</a>
-{% endblock %}
+<div class="container">
+    <h3 class="white-important">
+        {{  tag_line }}
+    </h3>
+    <form method="POST" class="col-12 col-md-6 no-padding pr-3 pr-md-0">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            {{ form | crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-primary" type="submit">Submit changes</button>
+        </div>
+    </form>
+</div>
+{% endblock contents %}

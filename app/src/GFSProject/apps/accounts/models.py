@@ -7,6 +7,8 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from PIL import Image
+
 
 
 class CustomUserManager(UserManager):
@@ -98,6 +100,8 @@ class Profile(models.Model):
     
     user = models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     name = models.CharField("ハンドルネーム", max_length=255)
+    image = models.ImageField(blank=True, upload_to='profile_pics')
+
     #picture = models.ImageField(upload_to='profile_pictures', blank=True, null=True,)
 
     introduce = models.TextField(blank=True)
@@ -105,8 +109,34 @@ class Profile(models.Model):
     def __str__(self):
         return self.name
 
+
+    @property
+    def followers(self):
+        return Follow.objects.filter(follow_user=self.user).count()
+
+    @property
+    def following(self):
+        return Follow.objects.filter(user=self.user).count()
+
+    def save(self, force_insert=False, force_update=False, using=None,
+             update_fields=None):
+        super().save()
+
+        img = Image.open(self.image.path)
+        if img.height > 300 or img.width > 300:
+            output_size = (300, 300)
+            img.thumbnail(output_size)
+            img.save(self.image.path)
+
 @receiver(post_save, sender=User)
 def create_profile(sender, **kwargs):
     """ 新ユーザー作成時に空のprofileも作成する """
     if kwargs['created']:
         user_profile = Profile.objects.get_or_create(user=kwargs['instance'])
+
+
+
+class Follow(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='user', on_delete=models.CASCADE)
+    follow_user = models.ForeignKey(User, related_name='follow_user', on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_now_add=True)
