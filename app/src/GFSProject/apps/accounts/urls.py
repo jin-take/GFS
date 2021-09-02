@@ -1,7 +1,8 @@
 from django.urls import path
 from . import views
 from GFSProject import views as topview
-
+from django.conf.urls.static import static
+from django.conf import settings
  
 urlpatterns = [
     path('', topview.index, name='index'),
@@ -12,4 +13,4 @@ urlpatterns = [
     path('accounts/user_create/', views.UserCreate.as_view(), name='user_create'),
     path('accounts/user_create/done', views.UserCreateDone.as_view(), name='user_create_done'),
     path('accounts/user_create/complete/<token>/', views.UserCreateComplete.as_view(), name='user_create_complete'),
-]
+]   + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
