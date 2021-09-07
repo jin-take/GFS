@@ -19,7 +19,6 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 
 ## Symbol Mark
-ムササビを元にした画像の用意(作成中)
 ![GFS_logo_yoko](https://user-images.githubusercontent.com/55073758/132361842-a6669f5f-3c37-4587-9c56-db88bf932d6a.png)
 
 ## The Service Introduction Page
