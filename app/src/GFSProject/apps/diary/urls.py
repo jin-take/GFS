@@ -8,4 +8,5 @@ urlpatterns = [
     path('detail', views.DiaryDetail.as_view(), name='diary_detail'),
     path('edit', views.DiaryEdit.as_view(), name='diary_edit'),
     path('post', views.DiaryPost.as_view(), name='diary_post'),
+    
 ]

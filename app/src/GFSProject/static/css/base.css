@@ -7,3 +7,8 @@
   height: 50px;
   background-color: darkgrey;
 }
+
+.nav-item nav-link{
+  background-color:aqua;
+
+}
