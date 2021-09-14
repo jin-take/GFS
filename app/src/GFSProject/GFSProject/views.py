@@ -12,3 +12,6 @@ def diary(request):
     
 def scraps(request):
     return render(request, 'scraps/list.html')
+
+def bstest(request):
+    return render(request, 'bstest.html')
