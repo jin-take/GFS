@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'apps.accounts.apps.AccountsConfig',
     'apps.murmur.apps.MurmurConfig',
     'apps.scraps.apps.ScrapsConfig',
-    'apps.community.apps.CommunityConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
