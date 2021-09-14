@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'apps',
     'apps.accounts.apps.AccountsConfig',
     'apps.murmur.apps.MurmurConfig',
+    'apps.scraps.apps.ScrapsConfig',
+    'apps.community.apps.CommunityConfig',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -129,6 +131,7 @@ DATABASES = {
         'PORT': '3306',
         'OPTIONS': {
             "init_command": "SET foreign_key_checks = 0;",
+            'charset': 'utf8mb4',
         }
     },
     
