@@ -36,6 +36,10 @@ class UserCreateForm(UserCreationForm):
         return email
 
 class ProfileForm(forms.ModelForm):
+
+    desiredqualification = forms.ModelMultipleChoiceField(queryset=Certifications.objects.all(), required=False, widget=forms.CheckboxSelectMultiple)
+
+
     class Meta:
         model = Profile
         fields = (
@@ -50,6 +54,7 @@ class ProfileForm(forms.ModelForm):
 
 class UserUpdateForm(forms.ModelForm):
     """ユーザー情報更新フォーム"""
+
 
     class Meta:
         model = User

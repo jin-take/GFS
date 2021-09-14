@@ -55,3 +55,4 @@ class MyUserAdmin(UserAdmin):
 admin.site.register(User, MyUserAdmin)
 admin.site.register(Follow)
 admin.site.register(Certifications)
+
