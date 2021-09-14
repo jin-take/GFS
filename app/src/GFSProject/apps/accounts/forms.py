@@ -3,7 +3,7 @@ from django.contrib.auth.forms import (
     AuthenticationForm, UserCreationForm
 )
 from django.contrib.auth import get_user_model
-from .models import Profile
+from .models import Profile, Certifications
 
 User = get_user_model()
 
@@ -32,14 +32,14 @@ class UserCreateForm(UserCreationForm):
 
     def clean_email(self):
         email = self.cleaned_data['email']
-        User.objects.filter(email=email, is_active=False).delete()
+        User(email=email, is_active=False).delete()
         return email
 
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = (
-            "name", "introduce","image"
+            "name","desiredqualification", "introduce","image"
         )
 
     def __init__(self, *args, **kwargs):
