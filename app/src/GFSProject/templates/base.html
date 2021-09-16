@@ -16,7 +16,8 @@
 <body>
 
   <!-- ナブバー -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 1rem;">
     <a class="navbar-brand" href="{% url 'index' %}">GFS</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,15 +28,30 @@
       <ul class="navbar-nav mr-auto">
         {% if user.is_authenticated %}
         <li>
-          <a class="nav-item nav-link" href="{% url 'profile' user.pk %}">ユーザー情報閲覧</a>
+          <a class="nav-item nav-link" href="{% url 'profile' user.pk %}">profile</a>
         </li>
-    
+
+        
         <li>
-          <a class="nav-item nav-link" href="{% url 'logout' %}">ログアウト</a>
+          <a class="nav-item nav-link" a href="{% url 'murmur:murmur_list'  %}">murmur</a>    
         </li>
+
+        <li>
+          <a class="nav-item nav-link" a href="{% url 'diary:diary_list'  %}">information</a>    
+        </li>
+
+        <li>
+          <a class="nav-item nav-link" a href="{% url 'scraps:index'  %}">community</a>    
+        </li>
+        
+
+        <li>
+          <a class="nav-item nav-link" href="{% url 'logout'  %}">ログアウト</a>
+        </li>
+
         {% else %}
         <li class="nav-item">
-          <a class="nav-item nav-link" href="{% url 'login' %}">
+          <a class="nav-item nav-link" href="{% url 'login'  %}">
             ログイン/会員登録
           </a>
         </li>
