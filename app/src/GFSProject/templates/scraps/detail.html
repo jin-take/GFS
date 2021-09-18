@@ -1,10 +1,24 @@
 {% extends 'base.html' %}
 
 {% block contents %}
-<p>scrapsの詳細画面です</p>
-<a href={% url 'scraps:scraps_list' %}>listへ</a>
-<br>
-<a href={% url 'scraps:scraps_edit' %}>editへ</a>
-<br>
-<a href={% url 'scraps:scraps_post' %}>postへ</a>
+<head>
+    <meta charset="utf-8">
+    <title>イベント詳細</title>
+  </head>
+  <body>
+    <h1>イベント詳細</h1>
+    {{event.title}}
+    <br>
+    {{event.text}}
+    <br>
+    開催日: {{ event.date|date:"Y" }}年 {{ event.date|date:"n"}}月 {{ event.date|date:"j"}}日
+    <br>
+    <label>カテゴリ：{{event.category}}</label>
+    <br>
+    <label>タグ:
+      {% for tag in event.tag.all %}
+        {{tag}}
+      {% endfor %}
+    </label>
+  </body>
 {% endblock %}
