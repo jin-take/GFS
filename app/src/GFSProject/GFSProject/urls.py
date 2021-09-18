@@ -35,6 +35,8 @@ urlpatterns = [
     path('diary/', include('apps.diary.urls')),
     path('murmur/', include('apps.murmur.urls')),
     path('scraps/', include('apps.scraps.urls')),
+    path('community/', include('apps.community.urls')),
+
 
 ]
 

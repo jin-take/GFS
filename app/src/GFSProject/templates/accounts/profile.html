@@ -25,6 +25,12 @@
             <td>{{ user.profile.name }}</td>
         </tr>
         <tr>
+            <th>希望資格</th>
+            {% for i in user.profile.desiredqualification.all %}
+            <li>{{ i.certifications }}</li>
+            {% endfor %}
+        </tr>
+        <tr>
             <th>自己紹介</th>
             <td>{{ user.profile.introduce }}</td>
         </tr>
