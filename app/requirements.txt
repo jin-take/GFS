@@ -1,2 +1,10 @@
 Django
 mysqlclient
+
+django_extensions
+djangorestframework
+django-filter
+django-crispy-forms
+channels
+channels-redis
+Pillow
