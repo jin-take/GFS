@@ -27,8 +27,6 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
 
-
-    
     path('accounts/', include('apps.accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 
@@ -38,8 +36,6 @@ urlpatterns = [
     
     path('bstest', views.bstest, name='bstest'),
     path('', views.index, name='index'),
-
-
 
 ]
 

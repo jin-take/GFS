@@ -1,137 +1,79 @@
+<!-- InformationのHTMLです -->
 {% extends 'base.html' %}
 {% block contents %}
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>COMMUNICATION</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-
-<body>
-<h3 class="white-important p-2">
-    information
-</h3>
-
-<div class="position-relative">
-  <div class="position-absolute top-0 start-0">
-    <hr color="#FF9933">
-    <table>
-      <tr>
-
-      <tr>
-        <td >
-         <strong>イベントの種類</strong>
-        </td>
-     </tr>
-
-          <tr>
-            <td>
-              <select id="selectbox1">
-                <option selected value="勉強会">勉強会</option>
-                <option value="もくもく会">もくもく会</option>
-                <option value="イベント">イベント</option>
-                <option value="その他">その他</option>
-              </select>
-            </td>
-          </tr>
-
-      <tr>
-          <td >
-           <strong>資格の種類</strong>
-          </td>
-       </tr>
-
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        <hr color="#FF9933">
+        <table>
             <tr>
-              <td>
-                <select id="selectbox2">
-                    <option selected value="ITパスポート">ITパスポート</option>
-                    <option value="情報セキュリティマネジメント">情報セキュリティマネジメント</option>
-                    <option value="基本情報技術者">基本情報技術者</option>
-                    <option value="その他">その他</option>
-                </select>
-              </td>
-            </tr>
-
             <tr>
-                <td >
-                 <strong>機関</strong>
+                <td>
+                    <strong>イベントの種類</strong>
                 </td>
-             </tr>
-
-
-            <tr>
-              <td>
-                <select id="selectbox3">
-                    <option selected value="spring">春</option>
-                    <option value="summer">夏</option>
-                    <option value="autumn">秋</option>
-                    <option value="winter">冬</option>
-                </select>
-              </td>
             </tr>
-
-            <tr>
-                <td >
-                 <strong>実施方法</strong>
-                </td>
-             </tr>
-
 
             <tr>
                 <td>
-                  <select id="selectbox4">
-                      <option selected value="online">オンライン</option>
-                      <option value="offline">オフライン</option>
-                  </select>
+                    <select id="selectbox1">
+                        <option selected value="勉強会">勉強会</option>
+                        <option value="もくもく会">もくもく会</option>
+                        <option value="イベント">イベント</option>
+                        <option value="その他">その他</option>
+                    </select>
                 </td>
+            </tr>
 
-              
-              </tr>
+            <tr>
+                <td>
+                    <strong>資格の種類</strong>
+                </td>
+            </tr>
 
-            </div>     
+            <tr>
+                <td>
+                    <select id="selectbox2">
+                        <option selected value="ITパスポート">ITパスポート</option>
+                        <option value="情報セキュリティマネジメント">情報セキュリティマネジメント</option>
+                        <option value="基本情報技術者">基本情報技術者</option>
+                        <option value="その他">その他</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>機関</strong>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select id="selectbox3">
+                        <option selected value="spring">春</option>
+                        <option value="summer">夏</option>
+                        <option value="autumn">秋</option>
+                        <option value="winter">冬</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>実施方法</strong>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select id="selectbox4">
+                        <option selected value="online">オンライン</option>
+                        <option value="offline">オフライン</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-
-
-
-
-
-<p>information一覧の画面です</p>
-<a href={% url 'diary:diary_detail' %}>detailへ</a>
-<br>
-<a href={% url 'diary:diary_edit' %}>editへ</a>
-<br>
-<a href={% url 'diary:diary_post' %}>postへ</a>
-
-
-
 
 {% endblock %}
