@@ -74,8 +74,8 @@
                         <!--<ul class="navbar-nav mr-auto">-->
                         {% if user.is_authenticated %}
                         <!--<li>
-                            <p class="font" href="{% url 'index' %}">GFS</p>
-                        </li>-->
+        <p class="font" href="{% url 'index' %}">GFS</p>
+    </li>-->
 
                         <li>
                             <a class="nav-item nav-link" href="{% url 'profile' user.pk %}">Profile</a>
@@ -119,26 +119,29 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/sticky-footer.css' %}">
         <!--<div class="wrap">-->
                 <!-- Custom styles for this template -->
-            <p>
-                <a class="foot-gray" href="#">
-                    GFSについて
-                </a>
-                <a class="foot-gray" href="#">
-                    利用規約
-                </a>
-                <a class="foot-gray" href="#">
-                    プライバシーポリシー
-                </a>
-                <a class="foot-gray" href="#">
-                    よくある質問
-                </a>
-                <a class="foot-gray" href="#">
-                    @2021 Team KOCHODANI
-                </a>
-                <a class="foot-gray" href="#">
-                    ヘルプ
-                </a>
-            </p>
+        <p>
+            <a class="foot-gray" href="#">
+                GFSについて
+            </a>
+            <a class="foot-gray" href="#">
+                利用規約
+            </a>
+            <a class="foot-gray" href="#">
+                プライバシーポリシー
+            </a>
+            <a class="foot-gray" href="#">
+                よくある質問
+            </a>
+            <a class="foot-gray" href="#">
+                取り扱う資格について
+            </a>
+            <a class="foot-gray" href="#">
+                ヘルプ
+            </a>
+            <a class="foot-gray" href="#">
+                @2021 Team KOCHODANI
+            </a>
+        </p>
         </div>
     </footer>
 
