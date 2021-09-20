@@ -77,6 +77,7 @@ header {
     border-radius: .25rem;
     max-width: 100%;
     height: auto;
+    width: 50%;
 }
 
 .text-pink {
@@ -152,4 +153,324 @@ a:hover{
     background-color: #6600CD;
     width: 593px;
     padding-bottom:107px;
+}
+
+.MurMurMain_container{
+    background: #fff;
+    padding-bottom:4rem;
+}
+
+.Container_wide{
+    max-width: 1200px;
+}
+
+.Container_common{
+    margin:0 auto;
+    padding: 40px;
+}
+
+.MurMurMain_innner{
+    position: relative;
+}
+
+.MurMurMain_stickyShare{
+    display: none;
+    position: absolute;
+    left: -80px;
+    width: 50px;
+    height: 100%;
+}
+
+.MurMurMain_stickyShareInner{
+    position: sticky;
+    top: 100px;
+}
+
+.LikeButton_container{
+    display: inline-flex;
+    align-items: center;
+}
+
+.LikeButton_container.count-bottom{
+    display: block;
+    text-align: center;
+}
+
+.LikeButton_button{
+    color: #fff;
+    background-color: #fff;
+    box-shadow: 0 2px 3px -1px;
+}
+
+.LikeButton_svgLike{
+    width: 30px;
+    height: 30px;
+}
+
+.LikeButton_svgLikeDecoration{
+    opacity: 0;
+}
+
+.LIkeButton_likedCount{
+    margin: 2px 0 0 2px;
+    font-size: 12px;
+    color: gray;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.MurMurMain_columnsContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.TweetsMain_content{
+    width: calc(100% - 330px);
+}
+
+.TweetsMain_main{
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px #4385bb12;
+    padding: 40px 0;
+    font-size: 16px;
+}
+
+.Container_default{
+    max-width: 960px;
+}
+
+.znc{
+    line-height: 1.9;
+}
+
+div{
+    display: block;
+}
+
+.MurMurMain_sidebarContainer{
+    width: 400px;
+}
+
+aside{
+    display: block;
+}
+.MurMurSidebar_container{
+    height: 100px;
+}
+
+.MurMurSidebar_title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.MurMurSidebar_profile{
+    padding: 15px 20px 25px; 
+    font-size: 15px;
+}
+
+.MurMurSidebar_sidebarCard{
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px #797979;
+}
+
+.MurMurSidebar_trends{
+    padding: 15px 20px 25px;
+    font-size: 15px;
+}
+
+.MurMurSidebar_post{
+    padding: 15px 20px 25px;
+    font-size: 15px;
+}
+
+.MurMurSidebar_button {
+    width: 100%;
+    box-shadow: 0 2px 4px #797979;
+    /*padding: .7em 1em;*/
+    padding: 25px 20px 25px;
+    color: #fff;
+    background: #6600cd;
+    border-color: cornflowerblue;
+    border-radius: .45em;
+}
+
+.Button_baseStyle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: .45em;
+    border: 1px solid #0000;
+}
+
+.MurMurSidebar_sticky{
+    position: sticky;
+    top: 30px;
+    max-height: calc(100vh-50px);
+    display: flex;
+    flex-direction: column;
+}
+
+.MurMurSidebar_user{
+    padding: 20px;
+}
+
+.SidebarUserBio_container {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.SidebarUserBio_user{
+    width: 100%;
+    line-height: 1.4;
+}
+
+.SidebarUserBio_name{
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    color: black;
+    margin-top: 3px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.SidebarUserBio_email {
+    text-align: center;
+    display: block;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 700;
+}
+
+.SidebarUserBio_follow {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Sidebar_followName{
+    margin: 0 7px;
+    flex: 1;
+    line-height: 1.3;
+    color: slategray;
+    font-size: 20px;
+}
+
+.SidebarUserBio_follower{
+    
+}
+.SidebarUserBio_following{
+    
+}
+
+.Tweets_block{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-bottom: solid 1px #eeeeee;
+    overflow: hidden;
+}
+
+.Tweets_blockBio {
+    max-height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: start;
+    padding-right: 0px;
+}
+
+.Tweets_blockUser {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    justify-content: center;
+}
+
+.Tweets_blockIcon {
+    text-align: center;
+    padding: 0px;
+    width: 100px;
+    height: 100%;
+    border: 0.2px;
+}
+
+.Tweets_blockUserName {
+    
+    display: block;
+    font-size: 2rem;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.Tweets_blockUserEmail {
+    text-align: center;
+    display: block;
+    font-size: 1rem;
+    color: cornflowerblue;
+    font-weight: 400;
+}
+
+.Tweets_blockPostTime {
+    text-align: center;
+    display: block;
+    font-size: 1rem;
+    color: #797979;
+    font-weight: 400;
+
+}
+
+.Tweets_block_container{
+    width: 100%;
+    padding: 20px;
+}
+
+.Tweets_postTitle {
+    text-align: left;
+    display: block;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 700;
+}
+
+.Tweets_postText {
+    text-align: left;
+    display: block;
+    font-size: 1rem;
+    color: black;
+    font-weight: 400;
+}
+
+.Tweets_postIcon {
+    padding: 10px 50px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.PostComments {
+    padding: 10px 10px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.PostCheers {
+    padding: 10px 10px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.PostGoods {
+    padding: 10px 10px;
+    justify-content: space-between;
+    display: flex;
 }

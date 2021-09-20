@@ -2,365 +2,297 @@
 {% extends 'base.html' %}
 {% block contents %}
 
-<!-- <p>murmurの一覧画面です</p> -->
-<div>
-    <div class="row">
-            <div class="col-lg-4 profile-section">
-                <h3 class="white-important p-2">
-                    Profile
-                </h3>
-                <div class="container shadow p-2 mb-5 bg-white rounded">
-                <div class="row">
-                    <!--<article class="media content-section" style="height: 140px; width: 100%">-->
-                    <!-- カラムは12個に分けた左から4個までの幅　レスポンシブルデザイン -->
-                        <div class="col-lg-12">
-                            <div class="text-center card-box">
-                                <div class="member-card pt-2 pb-2">
-                                    <!--<div class="thumb-lg member-thumb mx-auto"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="rounded-circle img-thumbnail" alt="profile-image"></div>-->
-                                    <!--<div class="d-flex full-width align-items-center"><img src="{{ user.profile.image.url }}" style="height: 200%; width: 200%;" class="rounded-circle img-fluid" alt="profile-image"></div>-->
-                                    <div class="thumb-lg member-thumb mx-auto">
-                                        <img src="{{ user.profile.image.url }}" class="rounded-circle img-thumbnail" alt="profile-image">
-                                    </div>
-                                    <!--<div class="thumb-lg member-thumb mx-auto"><img src="{{ user.profile.image.url }}" style="width: 90px; height: 90px;" class="rounded-circle mr-3 img-fluid" alt="profile-image"></div>-->
-                                    <div class="">
-                                        <!--<h4>Freddie J. Plourde</h4>-->
-                                        <h4>{{ user.profile.name }}</h4>
-                                        <!--<p class="text-muted">@Founder <span>| </span>-->
-                                        <!--<span><a href="#" class="text-pink">websitename.com</a></span></p>-->
-                                        <span><a href="#" class="text-gray">{{ user.email }}</a></span></p>
-                                        <!--<span><a href="#" class="text-pink">{{ user.email }}</a></span></p>-->
-                                    </div>
-                                    <div class="row full-width pl-2">
-                                        <div class="col-6">
-                                            Followers
+<article class="MurMurMain_container">
+    <div class="Container_wide Container_common">
+        <div class="ContainerUndo">
+            <div class="MurMurMain_innner">
+                <div class="MurMurMain_stickyShare">
+                    <div class="MurMurMain_stickyShareInner">
+                        <div class="LikeButton_container styke-large-white count-bottom">
+                            <button class="LikeButton_button" aria-label="いいね">
+                                <svg viewBox="0 0 110 110" class="LikeButton_svgLike">
+                                    <path></path>
+                                    <path></path>
+                                    <g class="LikeButton_svgLikeDecoration">
+                                        <circle cx="41.5" cy="9.5" r="3.5" fill="#3ea8ff"></circle>
+                                    </g>
+                                </svg>
+                            </button>
+                            <span class="LIkeButton_likedCount">23</span>
+                        </div>
+                        <span style="display:block;width:1px;height:0.5rem;flex-shrink:0"></span>
+                    </div>
+                </div>
+
+                <div class="MurMurMain_columnsContainer">
+                    <aside class="MurMurMain_sidebarContainer">
+                        <div class="MurMurSidebar_container">
+                            <div class="Container_default Container_common">
+                                <!--<div class="MurMurSidebar_post MurMurSidebar_sidebarCard">-->
+                                <button class="MurMurSidebar_button Button_baseStyle" 　href="{% url 'murmur:murmur_post' %}">
+                                    投稿する
+                                </button>
+                                <!--</div>-->
+
+                                <span style="display:block;width:1px;height:25px;flex-shrink:0"></span>
+
+                                <div class="MurMurSidebar_sticky">
+                                    <div class="MurMurSidebar_user MurMurSidebar_sidebarCard">
+                                        <div class="MurMurSidebar_title">
+                                            <!--Profile-->
                                         </div>
-                                        <div class="col-6">
-                                            Following
-                                        </div>
-                                        <div class="col-6">
-                                            <div>
-                                                <a href="{% url 'murmur:user-followers' user.profile.name %}">
-                                                    <h3 class="white-important follow-click">
-                                                        {{ user.profile.followers }}
-                                                    </h3>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div>
-                                                <a href="{% url 'murmur:user-follows' user.profile.name %}">
-                                                    <h3 class="white-important follow-click">
-                                                        {{ user.profile.following }}
-                                                    </h3>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex">
-                                        {% if user_profile is None %}
-                                        <div style="margin-left: auto; margin-right:auto">
-                                            <a class="btn btn-sm btn-outline-primary mb-4 mr-3 " href="{% url 'murmur:murmur_post' %}">
-                                                Tweet
+                                        <div class="SidebarUserBio_container">
+                                            <a href="#">
+                                                <img src="{{ user.profile.image.url }}" class="rounded-circle img-thumbnail" alt="profile-image">
                                             </a>
                                         </div>
-                                        {% endif %}
-                                        {%  if user_profile is not None and user_profile.id != user.id  and user.username != '' %}
-                                        <form method="POST">
-                                            {% csrf_token %}
-                                            <div class="form-group">
-                                                <button style="margin-left: 18px" class="btn btn-sm btn-outline-primary"
-                                                        name="{% if can_follow %}follow{% else %}unfollow{% endif %}"
-                                                        type="submit">
-                                                    {% if can_follow %}
-                                                    FOLLOW
-                                                    {% else %}
-                                                    UNFOLLOW
-                                                    {% endif %}
-                                                </button>
+                                        <div class="SidebarUserBio_user">
+                                            <div class="SidebarUserBio_name">
+                                                {{ user.profile.name }}
                                             </div>
-                                        </form>
-                                        {% endif %}
+                                            <div class="SidebarUserBio_email">
+                                                {{ user.email }}
+                                            </div>
+                                        </div>
+
+                                        <span style="display:block;width:1px;height:25px;flex-shrink:0"></span>
+
+                                        <div class="SidebarUserBio_follow">
+                                            <div class="SidebarUserBio_follower">
+                                                <div class="Sidebar_followName">
+                                                    Follower
+                                                </div>
+                                                <div>
+                                                    <a href="{% url 'murmur:user-followers' user.profile.name %}">
+                                                        <h3 class="white-important follow-click">
+                                                            {{ user.profile.followers }}
+                                                        </h3>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="SidebarUserBio_following">
+                                                <div class="Sidebar_followName">
+                                                    Following
+                                                </div>
+                                                <div>
+                                                    <a href="{% url 'murmur:user-follows' user.profile.name %}">
+                                                        <h3 class="white-important follow-click">
+                                                            {{ user.profile.following }}
+                                                        </h3>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!--<ul class="social-links list-inline">
-        <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li>
-        <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
-        <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Skype"><i class="fa fa-skype"></i></a></li>
-    </ul>-->
-                                    <!--<button type="button" class="btn btn-primary mt-3 btn-rounded waves-effect w-md waves-light">Message Now</button>-->
+
+                                    <span style="display:block;width:1px;height:25px;flex-shrink:0"></span>
+
+                                    <div class="MurMurSidebar_trends MurMurSidebar_sidebarCard">
+                                        <div class="MurMurSidebar_title">
+                                            Recomnends
+                                        </div>
+                                        <div>
+                                            リコメンド
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </aside>
+                  
+                    <section class="TweetsMain_content">
+                        <div class="TweetsMain_main">
+                            <div class="Container_default Container_common">
+                                <div id="topc-target-content">
+                                    <div class="znc BodyContent_positionAdjusted BodyContent_anchorToHeading">
+                                        <strong>Tweets</strong>
+                                    </div>
+                                </div>
+                                {% for post in posts %}
+                                <div class="Tweets_block">
+                                    <div class="Tweets_blockBio">
+                                        <div class="Tweets_blockIcon">
+                                            <img src="{{ user.profile.image.url }}" class="rounded-circle img-thumbnail" style="border:1.5px; width: 80px;height=100%;" alt="profile-image">
+                                        </div>
+                                        <div class="Tweets_blockUser">
+                                            <div class="Tweets_blockUserName">
+                                                {{ user.profile.name }}
+                                            </div>
+                                            <div class="Tweets_blockUserEmail">
+                                                {{ user.email }}
+                                            </div>
+                                        </div>
+                                        <span style="display:block;width:200px;height:100%;flex-shrink:0"></span>
+                                        <div class="Tweets_blockPostTime">
+                                            {{ post.date_posted | date:"H:i l, d.m.y" }}
+                                        </div>
+                                    </div>
+
+                                    <span style="display:block;width:1px;height:0.5rem;flex-shrink:0"></span>
+
+
+                                    <div class="Tweets_block_container">
+                                        <div class="Tweets_postTitle">
+                                            title
+                                        </div>
+                                        <div class="Tweets_postText">
+                                            {{ post.content }}
+                                        </div>
+
+                                    </div>
+
+                                    <div class="Tweets_postIcon">
+                                        <div class="PostComments">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-fill" viewBox="0 0 16 16">
+                                                <path d="M14 0a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
+                                            </svg>
+                                            <span style="display:block;width:10px;height:0.5rem;flex-shrink:0"></span>
+                                            <a href="/post/{{post.id}}/">
+                                                {{ post.number_of_comments }}
+                                            </a>
+                                        </div>
+
+                                        <div class="PostCheers">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flag-fill" viewBox="0 0 16 16">
+                                                <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001" />
+                                            </svg>
+                                            <span style="display:block;width:10px;height:0.5rem;flex-shrink:0"></span>
+                                            <a href="/post/{{post.id}}/">
+                                                {{ post.number_of_comments }}
+                                            </a>
+                                        </div>
+
+                                        <div class="PostGoods">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+                                                <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.964.22.817.533 2.512.062 4.51a9.84 9.84 0 0 1 .443-.05c.713-.065 1.669-.072 2.516.21.518.173.994.68 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.162 3.162 0 0 1-.488.9c.054.153.076.313.076.465 0 .306-.089.626-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.826 4.826 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.616.849-.231 1.574-.786 2.132-1.41.56-.626.914-1.279 1.039-1.638.199-.575.356-1.54.428-2.59z" />
+                                            </svg>
+                                            <span style="display:block;width:10px;height:0.5rem;flex-shrink:0"></span>
+                                            <a href="/post/{{post.id}}/">
+                                                {{ post.number_of_comments }}
+                                            </a>
+                                        </div>
+                                    </div>
 
                                 </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!--
+                    <section class="TweetsMain_content">
+                        <div class="TweetsMain_main">
+                            <div class="Container_default Container_common">
+                                <div id="topc-target-content">
+                                    <div class="znc BodyContent_positionAdjusted BodyContent_anchorToHeading">
+                                        <strong>Tweets</strong>
+
+                                        <div class="col-6 no-padding">
+                                            <h6 style="position: absolute; bottom: 0; right: 0"
+                                                class="white-important mb-3">
+                                                {{ page_obj.start_index }} - {{ page_obj.end_index }} of
+                                                {{ paginator.count }}
+                                            </h6>
+                                        </div>
+
+                                        {% for post in posts %}
+                                        <article class="media content-section hovered-tweet ">
+                                            <div style="width: 100%; word-break: break-all;">
+
+                                                <div class="pb-2 row m-0" style="width: 100%; margin-right: 0 !important;">
+                                                    <div style="padding-left: 0px !important;"
+                                                         class="col-8 no-padding d-flex align-items-center">
+                                                        <img class="rounded-circle mr-2"
+                                                             style="width: 100px; height: 100px;"
+                                                             src="{{ post.author.profile.image.url }}">
+                                                        <a class="mr-2 white-important" href="{% url 'murmur:user-posts'  post.author.profile.name%}">
+                                                            {{ post.author.profile.name }}
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-4 d-flex flex-row-reverse no-padding align-items-center"
+                                                         style="padding-right: 0 !important;">
+                                                        {% if post.author == user %}
+                                                        <a class="material-icons ml-2"
+                                                           style="font-size: 14px">clear</a>
+                                                        <a class="material-icons ml-2"
+                                                           style="font-size: 14px"></a>update</a>
+                                                        {%  endif %}
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2"
+                                                     style="width: 100%; height: 1px; background-color: rgba(255, 255, 255, 0.1)"></div>
+
+                                                <a style="color: rgba(156, 35, 35, 0.5) !important;"
+                                                   href="{% url 'murmur:murmur_detail' post.id %}">
+                                                    <p class="mb-4">
+                                                        {{ post.content }}
+                                                    </p>
+                                                </a>
+
+                                                <div class="row">
+                                                    <div class="col-6" style="display: flex;">
+                                                        <small style="opacity: 0.4;">
+
+
+                                                            <a href="#" onClick="document.getElementById('likebutton').submit()"><i class="fas fa-thumbs-up"></i></a> {{post.likes}}   |   <a href="#" onClick="document.getElementById('dislikebutton').submit()"><i class="fas fa-thumbs-down"></i></a> {{post.dislikes}}
+                                                        </small>
+                                                        <small style="opacity: 0.4; margin-left:15px;">
+                                                            <a href="/post/{{post.id}}/">
+                                                                <i style=" font-size: 16px;" class="far fa-comment"></i> {{ post.number_of_comments }} comment(s)
+                                                            </a>
+
+                                                        </small>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <small style="opacity: 0.4;"
+                                                               class="white-important d-flex full-width flex-row-reverse">
+                                                            {{ post.date_posted | date:"H:i l, d.m.y" }}
+                                                        </small>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </article>
+                                        {% endfor %}
+
+                                        <div class="full-width d-flex justify-content-center">
+                                            {% if is_paginated %}
+                                            {% if page_obj.has_previous %}
+                                            <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
+                                               href="?page=1">First</a>
+                                            <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
+                                               href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                                            {% endif %}
+
+                                            {% for num in page_obj.paginator.page_range %}
+                                            {% if page_obj.number == num %}
+                                            <a class="btn btn-sm btn-info mb-4 mr-2"
+                                               href="?page={{ num }}">{{ num }}</a>
+                                            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                                            <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
+                                               href="?page={{ num }}">{{ num }}</a>
+                                            {% endif %}
+                                            {% endfor %}
+
+                                            {% if page_obj.has_next %}
+                                            <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
+                                               href="?page={{ page_obj.next_page_number }}">Next</a>
+                                            <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
+                                               href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                                            {% endif %}
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
                         </div>
-                        <!-- end col -->
-                    <!--</article>-->
-                <!--</div>-->
-                <!-- end row -->
-                </div>
-          <!-- end container -->  
-            </div>
-                
-    
-    <!--<article class="media content-section" style="height: 140px; width: 100%">
-                    {%  if user_profile != None %}
-                    <div class="mt-2 d-flex full-width align-items-center">
-                        <img class="rounded-circle mr-3 img-fluid"
-                             style="width: 90px; height: 90px;"
-                             src="{{ user_profile.profile.image.url }}">
-                        <div>
-                            <h4 style="text-align: left"
-                                class="white-important">
-                                {{ user_profile.username }}
-                            </h4>
-                            <h6 style="text-align: left"
-                                class="email-profile">
-                                {{ user.email }}
-                            </h6>
-
-                        </div>
-                    </div>
-                    {%  else %}
-                    <div class="mt-2 d-flex full-width align-items-center">
-                        <img class="rounded-circle mr-3"
-                             style="width: 90px; height: 90px;"
-                             src="{{ user.profile.image.url }}">
-                        <div>
-                            <h4 style="text-align: left"
-                                class="white-important">
-                                {{ user.profile.name }}
-                            </h4>
-                            <h6 style="text-align: left"
-                                class="email-profile">
-                                {{ user.email }}
-                            </h6>
-                        </div>
-                    </div>
-                    {%  endif %}
-                </article>-->
-                <!--<article class="media content-section">
-                    <div class="row full-width pl-2">
-                        <div class="col-6">
-                            Followers
-                        </div>
-                        <div class="col-6">
-                            Following
-                        </div>
-                        {%  if user_profile != None %}
-                        <div class="col-6">
-                            <h3 class="white-important follow-click">
-                                <a href="{% url 'murmur:user-followers' user_profile.profile.name %}">
-                                    {{ user_profile.profile.followers }}
-                                </a>
-                            </h3>
-                        </div>
-                        <div class="col-6">
-                            <h3 class="white-important follow-click">
-                                <a href="{% url 'murmur:user-follows' user_profile.profile.name %}">
-                                    {{ user_profile.profile.following }}
-                            </h3>
-                            </a>
-                        </div>
-                        {% else %}
-                        <div class="col-6">
-                            <a href="{% url 'murmur:user-followers' user.profile.name %}">
-                                <h3 class="white-important follow-click">
-                                    {{ user.profile.followers }}
-                                </h3>
-                            </a>
-                        </div>
-
-                        <div class="col-6">
-                            <a href="{% url 'murmur:user-follows' user.profile.name %}">
-                                <h3 class="white-important follow-click">
-                                    {{ user.profile.following }}
-                                </h3>
-                        </div>
-                        </a>
-                        {%  endif %}
-                    </div>
-                </article>-->
-
-                <!--<div class="d-flex">
-                    {% if user_profile is None %}
-                    <div style="margin-left: auto; margin-right:auto">
-                        <a class="btn btn-sm btn-outline-primary mb-4 mr-3 " href="{% url 'murmur:murmur_post' %}">
-                            Tweet
-                        </a>
-                    </div>
-                    {% endif %}
-                    {%  if user_profile is not None and user_profile.id != user.id  and user.username != '' %}
-                    <form method="POST">
-                        {% csrf_token %}
-                        <div class="form-group">
-                            <button style="margin-left: 18px" class="btn btn-sm btn-outline-primary"
-                                    name="{% if can_follow %}follow{% else %}unfollow{% endif %}"
-                                    type="submit">
-                                {% if can_follow %}
-                                FOLLOW
-                                {% else %}
-                                UNFOLLOW
-                                {% endif %}
-                            </button>
-                        </div>
-                    </form>
-                    {% endif %}
-                </div>-->
-            </div>
-
-
-    </div>
-        <div class="col-lg-4 scrollable">
-            <div class="full-width row">
-                <div class="col-6">
-                    <h3 class="white-important mb-3">
-                        Tweets
-                    </h3>
-                </div>
-                <div class="col-6 no-padding">
-                    <h6 style="position: absolute; bottom: 0; right: 0"
-                        class="white-important mb-3">
-                        {{ page_obj.start_index }} - {{ page_obj.end_index }} of
-                        {{ paginator.count }}
-                    </h6>
+                    </section>
+    -->
                 </div>
             </div>
-
-            {% for post in posts %}
-            <article class="media content-section hovered-tweet">
-                <div style="width: 100%; word-break: break-all;">
-
-                    <div class="pb-2 row m-0" style="width: 100%; margin-right: 0 !important;">
-                        <div style="padding-left: 0px !important;"
-                             class="col-8 no-padding d-flex align-items-center">
-                            <img class="rounded-circle mr-2"
-                                 style="width: 20px; height: 20px;"
-                                 src="{{ post.author.profile.image.url }}">
-                            <a class="mr-2 white-important" href="{% url 'murmur:user-posts'  post.author.profile.name%}">
-                                {{ post.author.profile.name }}
-                            </a>
-                        </div>
-                        <div class="col-4 d-flex flex-row-reverse no-padding align-items-center"
-                             style="padding-right: 0 !important;">
-                            {% if post.author == user %}
-                            <a class="material-icons ml-2"
-                               style="font-size: 14px">clear</a>
-                            <a class="material-icons ml-2"
-                               style="font-size: 14px"></a>update</a>
-                            {%  endif %}
-                        </div>
-                    </div>
-                    <div class="mb-2"
-                         style="width: 100%; height: 1px; background-color: rgba(255, 255, 255, 0.1)"></div>
-
-                    <a style="color: rgba(156, 35, 35, 0.5) !important;"
-                       href="{% url 'murmur:murmur_detail' post.id %}">
-                        <p class="mb-4">
-                            {{ post.content }}
-                        </p>
-                    </a>
-
-                    <div class="row">
-                        <div class="col-6" style="display: flex;">
-                            <small style="opacity: 0.4;">
-
-                                <!-- Like Buttons Here -->
-                                <a href="#" onClick="document.getElementById('likebutton').submit()"><i class="fas fa-thumbs-up"></i></a> {{post.likes}}   |   <a href="#" onClick="document.getElementById('dislikebutton').submit()"><i class="fas fa-thumbs-down"></i></a> {{post.dislikes}}
-                            </small>
-                            <small style="opacity: 0.4; margin-left:15px;">
-                                <a href="/post/{{post.id}}/">
-                                    <i style=" font-size: 16px;" class="far fa-comment"></i> {{ post.number_of_comments }} comment(s)
-                                </a>
-
-                            </small>
-                        </div>
-                        <div class="col-6">
-                            <small style="opacity: 0.4;"
-                                   class="white-important d-flex full-width flex-row-reverse">
-                                {{ post.date_posted | date:"H:i l, d.m.y" }}
-                            </small>
-                        </div>
-                    </div>
-
-                </div>
-            </article>
-            {% endfor %}
-
-            <div class="full-width d-flex justify-content-center">
-                {% if is_paginated %}
-                {% if page_obj.has_previous %}
-                <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
-                   href="?page=1">First</a>
-                <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
-                   href="?page={{ page_obj.previous_page_number }}">Previous</a>
-                {% endif %}
-
-                {% for num in page_obj.paginator.page_range %}
-                {% if page_obj.number == num %}
-                <a class="btn btn-sm btn-info mb-4 mr-2"
-                   href="?page={{ num }}">{{ num }}</a>
-                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-                <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
-                   href="?page={{ num }}">{{ num }}</a>
-                {% endif %}
-                {% endfor %}
-
-                {% if page_obj.has_next %}
-                <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
-                   href="?page={{ page_obj.next_page_number }}">Next</a>
-                <a class="btn btn-sm btn-outline-secondary mb-4 mr-2"
-                   href="?page={{ page_obj.paginator.num_pages }}">Last</a>
-                {% endif %}
-                {% endif %}
-            </div>
-        </div>
-
-        <div class="col-lg-8 col-md-3 dont-move">
-            <form action="{% url 'murmur:search' %}" method="post">
-                {% csrf_token %}
-                <div class="search-container">
-                    <div class="search">
-                        <input required name="search" type="text" id="zip-code-input" placeholder="Search Twitter">
-                        <button type="submit" style="border:0; background: transparent;"><i class="fa fa-search"></i> </button> </a>
-            </form>
         </div>
     </div>
 
-    <h3 class="white-important mb-3 mt-4"> Trends </h3>
+</article>
 
-    {%  if user_profile is None %}
-
-    <article class="t-section media content-section">
-
-        <div class="row ">
-            <div class="col-12">
-                <h3>Who to follow</h3>
-            </div>
-            <ul class="col-12 mt-2">
-                {% for user in all_users %}
-                <li>
-                    <div class="who-to-follow">
-
-                        <div style="padding-left: 0px !important;"
-                             class="col-8 no-padding d-flex align-items-center">
-                            <img class="rounded-circle mr-2"
-                                 style="width: 20px; height: 20px;"
-                                 src="{{ user.profile.image.url }}">
-                            <a class="mr-2 white-important" href="{% url 'murmur:user-posts' user.profile.name %}">
-                                {{ user.profile.name }}
-                            </a>
-                        </div>
-                        <p>{{ user.email }}</p>
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
-
-        </div>
-
-    </article>
-
-{% endif %}
-<p>
-    <a href="">Terms</a>
-    © 2021 GFS
-</p>
 {% endblock %}
