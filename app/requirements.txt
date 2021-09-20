@@ -1,2 +1,5 @@
 Django
 mysqlclient
+djangorestframework
+pillow
+django-crispy-forms
