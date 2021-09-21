@@ -27,14 +27,15 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
 
-
-
     path('accounts/', include('apps.accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 
     path('diary/', include('apps.diary.urls')),
     path('murmur/', include('apps.murmur.urls')),
     path('scraps/', include('apps.scraps.urls')),
+    
+    path('bstest', views.bstest, name='bstest'),
+    path('', views.index, name='index'),
 
 ]
 
