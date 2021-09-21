@@ -1,28 +1,10 @@
 {% extends 'base.html' %}
 
 {% block contents %}
-
-<head>
-    <meta charset="utf-8">
-    <title>記事作成画面</title>
-  </head>
-  <body>
-    <h1>イベント投稿画面</h1>
-    <form action="" method="post">
-      {% csrf_token %}
-      {{form.title}}
-      <br>
-      {{form.text}}
-      <br>
-      開催日: {{form.date}}  <--  1
-      <br>
-      <label>カテゴリ：{{form.category}}</label>  <-- 2
-      <br>
-      <label>タグ:{{form.tag}}</label>  <-- 3
-      <br>
-      <input type="submit" value="Submit">
-    </form>
-  </body>
-
-
+<p>scrapsの投稿画面です</p>
+<a href={% url 'scraps:scraps_list' %}>listへ</a>
+<br>
+<a href={% url 'scraps:scraps_detail' %}>detailへ</a>
+<br>
+<a href={% url 'scraps:scraps_edit' %}>editへ</a>
 {% endblock %}

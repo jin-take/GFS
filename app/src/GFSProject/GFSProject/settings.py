@@ -39,14 +39,22 @@ ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = []
 
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+
 # Application definition
 
 INSTALLED_APPS = [
     'apps',
     'apps.accounts.apps.AccountsConfig',
     'apps.murmur.apps.MurmurConfig',
-    'apps.scraps.apps.ScrapsConfig',
-
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,6 +63,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'crispy_forms',
+ 
 ]
 
 MIDDLEWARE = [
@@ -79,6 +88,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates/murmur'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -130,7 +140,6 @@ DATABASES = {
         'PORT': '3306',
         'OPTIONS': {
             "init_command": "SET foreign_key_checks = 0;",
-            'charset': 'utf8mb4',
         }
     },
     

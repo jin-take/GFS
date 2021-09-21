@@ -19,7 +19,7 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 
 ## Symbol Mark
-<img src="https://github.com/jin237/GFS/blob/main/github_readme/logo/GFS%E3%83%AD%E3%82%B3%E3%82%99%E6%A1%88_5.png" height=200px><img src="https://github.com/jin237/GFS/blob/main/github_readme/logo/GFS%E3%83%AD%E3%82%B3%E3%82%99%E6%A1%88_6.png" height=200px><img src="https://github.com/jin237/GFS/blob/main/github_readme/logo/GFS%E3%83%AD%E3%82%B3%E3%82%99%E6%A1%88_7.png" height=200px>
+![GFS_logo_yoko](https://user-images.githubusercontent.com/55073758/132361842-a6669f5f-3c37-4587-9c56-db88bf932d6a.png)
 
 ## The Service Introduction Page
 - [【Main Page】](https://determined-banach-55a167.netlify.app/)

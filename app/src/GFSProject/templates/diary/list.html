@@ -1,10 +1,79 @@
+<!-- InformationのHTMLです -->
 {% extends 'base.html' %}
-
 {% block contents %}
-<p>diary一覧の画面です</p>
-<a href={% url 'diary:diary_detail' %}>detailへ</a>
-<br>
-<a href={% url 'diary:diary_edit' %}>editへ</a>
-<br>
-<a href={% url 'diary:diary_post' %}>postへ</a>
+
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        <hr color="#FF9933">
+        <table>
+            <tr>
+            <tr>
+                <td>
+                    <strong>イベントの種類</strong>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select id="selectbox1">
+                        <option selected value="勉強会">勉強会</option>
+                        <option value="もくもく会">もくもく会</option>
+                        <option value="イベント">イベント</option>
+                        <option value="その他">その他</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>資格の種類</strong>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select id="selectbox2">
+                        <option selected value="ITパスポート">ITパスポート</option>
+                        <option value="情報セキュリティマネジメント">情報セキュリティマネジメント</option>
+                        <option value="基本情報技術者">基本情報技術者</option>
+                        <option value="その他">その他</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>機関</strong>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select id="selectbox3">
+                        <option selected value="spring">春</option>
+                        <option value="summer">夏</option>
+                        <option value="autumn">秋</option>
+                        <option value="winter">冬</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>実施方法</strong>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select id="selectbox4">
+                        <option selected value="online">オンライン</option>
+                        <option value="offline">オフライン</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
 {% endblock %}
