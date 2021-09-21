@@ -32,7 +32,6 @@ header {
     background-color: aqua;
     justify-content: center;
 }
-}
 
 .navbar{
   margin: 0;
@@ -144,9 +143,12 @@ a.foot-gray {
 }
 
 a:hover{
-    color: #6600CD;
-    font-size: .65em; /*•¶ŽšƒTƒCƒY2”{*/
+    /* color: #6600CD; */
+    /* font-size: .65em; ï¿½ï¿½ï¿½ï¿½ï¿½Tï¿½Cï¿½Y2ï¿½{ */
     font-weight: bold;
+    background-color: #6600CD;
+    border-radius: 10px;
+    color: black;
 }
 
 #container3 {
