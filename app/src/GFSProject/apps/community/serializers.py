@@ -14,9 +14,7 @@ class MessageModelSerializer(ModelSerializer):
         user = self.context['request'].user
         recipient = get_object_or_404(
             User, username=validated_data['recipient']['username'])
-        msg = MessageModel(recipient=recipient,
-                           body=validated_data['body'],
-                           user=user)
+        msg = MessageModel(recipient=recipient, body=validated_data['body'], user=user)
         msg.save()
         return msg
 

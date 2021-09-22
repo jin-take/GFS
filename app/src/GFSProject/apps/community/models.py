@@ -1,5 +1,4 @@
-from django.db.models import (Model, TextField, DateTimeField, ForeignKey,
-                              CASCADE)
+from django.db.models import (Model, TextField, DateTimeField, ForeignKey, CASCADE)
 
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
@@ -13,12 +12,9 @@ class MessageModel(Model):
     the message body.
 
     """
-    user = ForeignKey(User, on_delete=CASCADE, verbose_name='user',
-                      related_name='from_user', db_index=True)
-    recipient = ForeignKey(User, on_delete=CASCADE, verbose_name='recipient',
-                           related_name='to_user', db_index=True)
-    timestamp = DateTimeField('timestamp', auto_now_add=True, editable=False,
-                              db_index=True)
+    user = ForeignKey(User, on_delete=CASCADE, verbose_name='user', related_name='from_user', db_index=True)
+    recipient = ForeignKey(User, on_delete=CASCADE, verbose_name='recipient', related_name='to_user', db_index=True)
+    timestamp = DateTimeField('timestamp', auto_now_add=True, editable=False, db_index=True)
     body = TextField('body')
 
     def __str__(self):
