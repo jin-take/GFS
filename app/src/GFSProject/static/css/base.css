@@ -143,10 +143,10 @@ a.foot-gray {
 }
 
 a:hover{
-    color: #6600CD;
     font-weight: bold;
     background-color: #6600CD;
     border-radius: 10px;
+    color: black;
 }
 
 #container3 {
