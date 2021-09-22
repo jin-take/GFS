@@ -1,10 +1,32 @@
-<!-- CommunityのHTMLです -->
 {% extends 'base.html' %}
+
 {% block contents %}
-<p>scraps一覧の画面です</p>
-<a href={% url 'scraps:scraps_detail' %}>detailへ</a>
-<br>
-<a href={% url 'scraps:scraps_edit' %}>editへ</a>
-<br>
-<a href={% url 'scraps:scraps_post' %}>postへ</a>
+<head>
+    <meta charset="utf-8">
+    <title>イベント一覧画面</title>
+</head>
+<body>
+    <h1>イベント一覧画面</h1>
+    <a href="{% url 'scraps:event_post' %}">イベント新規作成</a>  <-- 1
+    <form action="{% url 'scraps:index' %}" method="post">
+        {% csrf_token %}
+        カテゴリ：
+        <select name="category">
+            <option value="">-----------</option>  <-- 2
+            {% for category in categories %}
+            <option value="{{category.name}}">{{category.name}}</option>  <-- 3
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="更新">
+        </form>
+        <ul>
+        {% for event in events %}
+        <li>
+            <a href="{% url 'scraps:event_detail' event.id %}"> 
+            {{event.title}} 開催日: {{ event.date|date:"Y" }}年 {{ event.date|date:"n"}}月 {{ event.date|date:"j"}}日  <-- 4
+        </li>
+        {% endfor %}
+        </ul>
+    </body>
 {% endblock %}

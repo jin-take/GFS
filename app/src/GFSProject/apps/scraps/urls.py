@@ -15,4 +15,4 @@ urlpatterns = [
     path('post', views.PostEvent, name='event_post'),
     path('detail/<int:id>/', views.EventDetail, name='event_detail'),
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
