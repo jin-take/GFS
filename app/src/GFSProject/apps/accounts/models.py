@@ -110,6 +110,7 @@ class Profile(models.Model):
     image = models.ImageField(blank=True, upload_to='profile_pics')
 
     #picture = models.ImageField(upload_to='profile_pictures', blank=True, null=True,)
+    get_certified = models.ManyToManyField(Certifications,related_name='get_certified')
     desiredqualification = models.ManyToManyField(Certifications)
     introduce = models.TextField(blank=True)
 

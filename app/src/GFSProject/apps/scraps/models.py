@@ -18,6 +18,8 @@ class Event(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE, null=True, blank=True)  # ...2
     tag = models.ManyToManyField(Tag, blank=True)  # ...3
     del_flag = models.BooleanField(default=False)  # ...4
+    image = models.ImageField(blank=True, upload_to='event_pics')
+
 
     def __str__(self):
         return self.title

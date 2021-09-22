@@ -43,7 +43,7 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = (
-            "name","desiredqualification", "introduce","image"
+            "name","get_certified","desiredqualification", "introduce","image"
         )
 
     def __init__(self, *args, **kwargs):

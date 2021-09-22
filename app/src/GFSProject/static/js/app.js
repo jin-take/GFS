@@ -5,6 +5,8 @@ let userList = $('#user-list');
 let messageList = $('#messages');
 
 function updateUserList() {
+    console.log("adfffffffffffffffffffff")
+
     $.getJSON('api/v1/user/', function (data) {
         userList.children('.user').remove();
         for (let i = 0; i < data.length; i++) {
@@ -101,6 +103,7 @@ $(document).ready(function () {
     chatInput.keypress(function (e) {
         if (e.keyCode == 13)
             chatButton.click();
+
     });
 
     chatButton.click(function () {

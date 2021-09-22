@@ -66,7 +66,5 @@ class UserModelViewSet(ModelViewSet):
     def list(self, request, *args, **kwargs):
         # Get all users except yourself
         self.queryset = self.queryset.exclude(id=request.user.id)
-        print("userlist")
-        print(self.queryset)
 
         return super(UserModelViewSet, self).list(request, *args, **kwargs)

@@ -193,8 +193,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#ASGI_APPLICATION = 'GFSProject.asgi.application'
-ASGI_APPLICATION = 'GFSProject.routing.application'
+ASGI_APPLICATION = 'GFSProject.asgi.application'
+#ASGI_APPLICATION = 'GFSProject.routing.application'
 
 
 CHANNEL_LAYERS = {
