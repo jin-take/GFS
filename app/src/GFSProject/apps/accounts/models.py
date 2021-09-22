@@ -95,6 +95,13 @@ class User(AbstractBaseUser, PermissionsMixin):
         """
         return self.email
 
+class Certifications(models.Model):
+    certifications = models.CharField(max_length=50)
+
+    class Meta:
+        verbose_name = 'certification'  # 単数形
+        verbose_name_plural = 'certifications'  # 複数形
+
 
 class Profile(models.Model):
     
@@ -103,7 +110,8 @@ class Profile(models.Model):
     image = models.ImageField(blank=True, upload_to='profile_pics')
 
     #picture = models.ImageField(upload_to='profile_pictures', blank=True, null=True,)
-
+    get_certified = models.ManyToManyField(Certifications,related_name='get_certified')
+    desiredqualification = models.ManyToManyField(Certifications)
     introduce = models.TextField(blank=True)
 
     def __str__(self):
@@ -118,8 +126,7 @@ class Profile(models.Model):
     def following(self):
         return Follow.objects.filter(user=self.user).count()
 
-    def save(self, force_insert=False, force_update=False, using=None,
-             update_fields=None):
+    def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
         super().save()
 
         img = Image.open(self.image.path)

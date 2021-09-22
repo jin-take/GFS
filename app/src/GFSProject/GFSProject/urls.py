@@ -33,6 +33,8 @@ urlpatterns = [
     path('diary/', include('apps.diary.urls')),
     path('murmur/', include('apps.murmur.urls')),
     path('scraps/', include('apps.scraps.urls')),
+    path('community/', include('apps.community.urls')),
+
     
     path('bstest', views.bstest, name='bstest'),
     path('', views.index, name='index'),
