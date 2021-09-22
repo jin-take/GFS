@@ -51,10 +51,16 @@ STATICFILES_DIRS = (
 # Application definition
 
 INSTALLED_APPS = [
+
+    'channels', 
+
     'apps',
     'apps.accounts.apps.AccountsConfig',
     'apps.murmur.apps.MurmurConfig',
-    
+    'apps.scraps.apps.ScrapsConfig',
+    'apps.community.apps.CommunityConfig',
+
+    'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -63,7 +69,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'crispy_forms',
- 
+
 ]
 
 MIDDLEWARE = [
@@ -128,6 +134,7 @@ LOGOUT_REDIRECT_URL = 'login'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+MESSAGES_TO_LOAD = 15
 
 
 DATABASES = {
@@ -140,6 +147,7 @@ DATABASES = {
         'PORT': '3306',
         'OPTIONS': {
             "init_command": "SET foreign_key_checks = 0;",
+            'charset': 'utf8mb4',       
         }
     },
     
@@ -189,3 +197,23 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ASGI_APPLICATION = 'GFSProject.asgi.application'
+#ASGI_APPLICATION = 'GFSProject.routing.application'
+
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "asgiref.inmemory.ChannelLayer",
+        "ROUTING": "community.routing.channel_routing",
+    },
+}
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}

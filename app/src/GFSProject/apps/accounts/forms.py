@@ -3,7 +3,7 @@ from django.contrib.auth.forms import (
     AuthenticationForm, UserCreationForm
 )
 from django.contrib.auth import get_user_model
-from .models import Profile
+from .models import Profile, Certifications
 
 User = get_user_model()
 
@@ -36,10 +36,14 @@ class UserCreateForm(UserCreationForm):
         return email
 
 class ProfileForm(forms.ModelForm):
+
+    desiredqualification = forms.ModelMultipleChoiceField(queryset=Certifications.objects.all(), required=False, widget=forms.CheckboxSelectMultiple)
+
+
     class Meta:
         model = Profile
         fields = (
-            "name", "introduce","image"
+            "name","get_certified","desiredqualification", "introduce","image"
         )
 
     def __init__(self, *args, **kwargs):
