@@ -107,7 +107,7 @@ class Profile(models.Model):
     
     user = models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     name = models.CharField("ハンドルネーム", max_length=255)
-    image = models.ImageField(blank=True, upload_to='profile_pics')
+    image = models.ImageField(blank=True, upload_to='profile_pics',default='default.png')
 
     #picture = models.ImageField(upload_to='profile_pictures', blank=True, null=True,)
     get_certified = models.ManyToManyField(Certifications,related_name='get_certified')

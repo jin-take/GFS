@@ -16,6 +16,8 @@ from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser 
 from rest_framework import status
 from django.conf import settings
+from django.urls import reverse_lazy
+
 
 PAGINATION_COUNT = 10
 #User = settings.AUTH_USER_MODEL
@@ -134,7 +136,7 @@ class MurmurPost(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['content']
     template_name = 'murmur/post.html'
-    success_url = '/'
+    success_url = reverse_lazy("murmur:murmur_list")
 
     def form_valid(self, form):
         form.instance.author = self.request.user
