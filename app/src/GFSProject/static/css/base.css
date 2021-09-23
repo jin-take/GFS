@@ -20,7 +20,7 @@ body {
 .container {
     width: 80%;
     /*    height: 100%;
-    background-color: white;*/
+ background-color: white;*/
     display: flex;
 }
 
@@ -34,11 +34,11 @@ header {
 }
 
 .navbar{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
 /*   background-color:white;
-    background-color:#6600CD;*/
+   background-color:#6600CD;*/
 }
 
 .card-box {
@@ -143,6 +143,8 @@ a.foot-gray {
 }
 
 a:hover{
+    /* color: #6600CD; */
+    /* font-size: .65em; �����T�C�Y2�{ */
     font-weight: bold;
     background-color: #6600CD;
     border-radius: 10px;
@@ -161,7 +163,7 @@ a:hover{
 }
 
 .Container_wide{
-    max-width: 1200px;
+    max-width: 1500px;
 }
 
 .Container_common{
@@ -474,3 +476,173 @@ aside{
     justify-content: space-between;
     display: flex;
 }
+
+
+/* Community */
+
+
+.balloon-chat {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    /* 左の吹き出し */
+    .balloon-chat.left { 
+    text-align: left; 
+    flex-direction: row; /* 左から右に並べる */
+    }
+    /* 右の吹き出し */
+    .balloon-chat.right { 
+    text-align: right; 
+    flex-direction: row-reverse; /* 右から左に並べる */
+    }
+    /* 吹き出しの入力部分の作成 */
+    .chatting {
+    position: relative;
+    display: inline-block; /* 吹き出しが文字幅に合わせます */ 
+    margin: 10px 20px;
+    padding: 10px 20px;
+    background: #ccffcc; 
+    text-align: left; 
+    border-radius: 12px; 
+    }
+    /* 吹き出しの三角部分の作成 */
+    .chatting::after {
+    content: "";
+    border: 15px solid transparent;
+    border-top-color: #ccffcc; 
+    position: absolute;
+    top: 10px; 
+    }
+    .left .chatting::after {
+    left: -15px; 
+    }
+    .right .chatting::after {
+    right: -15px; 
+    } 
+    /* アイコンの作成 */
+    .balloon-chat figure img {
+    border-radius: 50%; 
+    border: 2px solid #333300; 
+    margin: 0;
+    }
+    /* アイコンの大きさ */
+    .icon-img {
+    
+
+    width: 80px;
+    height: 80px;
+    }
+    /* アイコンの名前の設定 */
+    .icon-name {
+    width: 80px; /* アイコンの大きさと合わせる */
+    font-size: 12px;
+    text-align: center;
+    }
+
+    .Community_Main_content{
+        width: calc(100% - 330px);
+        height: calc(100% - 10%);
+        background-color: #ddd2fc;
+        height: 100%;
+        
+    }
+
+    .Communication_user_select{
+    flex-direction: row; 
+    }
+
+    .Communication_list_box{
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+    .Community_Container_common{
+        margin:0 auto;
+        padding: 40px;
+    }
+
+
+    ul.cp_list {
+        position: relative;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        list-style-type: none;
+    }
+    ul.cp_list li {
+        display: flex;
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        /* margin-bottom: 5px; */
+        line-height: 3.5;
+        /* vertical-align: middle; */
+        background: #D2C5F5;
+        border-radius: 20px 20px 20px 20px;
+        color: #3b47ad;
+        width: 280px;
+    }
+    
+    .Communication_list_container{
+
+    padding: 10%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px #797979;
+    /* display: ; */
+    }
+
+
+    .flex_1{
+        display: flex;
+        padding: 0.5em 1em;
+        font-weight: bold;
+        border: solid 3px #000000;
+    }
+    
+    .flex_1:hover {
+        background-color: #D2C5F5;
+      }
+
+    .flex_1:active {
+        background-color: #8e3ce0;
+      }
+
+      a:visited {
+        color: #4c00ff;
+      }
+
+    .icon_c{
+        text-align: left;
+    }
+  
+    .name_c{
+        text-align: left;
+
+    }
+
+
+
+    .cp_iptxt input[type='text'] {
+        /* font: 15px/24px sans-serif; */
+        /* box-sizing: border-box;  */
+        width: 80%;
+        padding: 0.3em;
+        /* transition: 0.3s; */
+        letter-spacing: 1px;
+        /* color: #000000; */
+        /* border: 1px solid #1b2538; */
+        /* border-radius: 4px; */
+        margin: 15px;
+        float:left;
+    }
+
+
+    .flex_send{
+        display: flex;
+    }
+
+    /* .send_image{text-align: center;} */
+
+    .cp_img{
+        float:left;
+        margin: 20px 0px 0px 0px;
+    }
