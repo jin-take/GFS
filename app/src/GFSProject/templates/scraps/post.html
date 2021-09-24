@@ -8,7 +8,8 @@
   </head>
   <body>
     <h1>イベント投稿画面</h1>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
+    
       {% csrf_token %}
       {{form.title}}
       <br>
@@ -20,9 +21,24 @@
       <br>
       <label>タグ:{{form.tag}}</label>  <-- 3
       <br>
+
+        <label>画像:{{form.image}}</label>
+
+      
+
+
+      <br>
       <input type="submit" value="Submit">
+
+
     </form>
+
+    <span style="display:block;width:auto;height:20px;flex-shrink:0"></span>
+    <a href="{% url 'scraps:index' %}">投稿一覧に戻る</a>
+
   </body>
+
+
 
 
 {% endblock %}
