@@ -2,16 +2,20 @@
 
 {% load crispy_forms_tags %}
 {% block contents %}
-<div class="container">
+<div class="container_post">
+    <div class="user_post_div">
     <h3 class="white-important mb-3">
-        Post
+        <div class="white_margin">
+            Post
+        </div>
     </h3>
-   <article class="media content-section">
-        <div style="width: 100%; word-break: break-all;" class="hovered-tweet-comment">
-            <div class="pb-2 row m-0 " style="width: 100%; margin-right: 0 !important;">
-               <div
+   <!-- <article class="media content-section"> -->
+        <!-- <div style="width: 100%; word-break: break-all;" class="hovered-tweet-comment"> -->
+            <!-- <div class="pb-2 row m-0 " style="width: 100%; margin-right: 0 !important;"> -->
+               <!-- <div
                        style="padding-left: 0px !important;"
-                       class="col-8 no-padding d-flex align-items-center">
+                       class="col-8 no-padding d-flex align-items-center"> -->
+        
                    <img
                        class="rounded-circle mr-2"
                        style="width: 20px; height: 20px;"
@@ -19,9 +23,9 @@
                    <a class="mr-2 white-important" href="{% url 'murmur:murmur_detail' post.id %}">
                        {{ post.author.profile.name }}
                    </a>
-               </div>
-               <div class="col-4 d-flex flex-row-reverse no-padding align-items-center"
-                    style="padding-right: 0 !important;">
+               <!-- </div> -->
+               <!-- <div class="col-4 d-flex flex-row-reverse no-padding align-items-center" -->
+                    <!-- style="padding-right: 0 !important;"> -->
                    {% if post.author == user %}
                         <a class="material-icons ml-2"
                            style="font-size: 14px"
@@ -30,8 +34,8 @@
                            style="font-size: 14px"
                                 href="{% url 'murmur:murmur_detail' post.id %}">update</a>
                     {%  endif %}
-               </div>
-           </div>
+               <!-- </div> -->
+           <!-- </div> -->
             <div
                     class="mb-2 "
                     style="width: 100%; height: 1px; background-color: rgba(255, 255, 255, 0.1)"></div>
@@ -39,21 +43,36 @@
                 <p>
                     {{ post.content }}
                 </p>
-
+                <div class="date_size">
                 <small
                     class="white-important d-flex full-width flex-row-reverse">
                     {{ post.date_posted | date:"H:i l, d.m.y" }}
                 </small>
+                </div>
             </a>
-        </div>
-   </article>
-    <div class="row pl-3">
-        <div class="col-12 col-md-6 pl-0">
+
+        
+    </div>
+
+    
+    <span style="display:block;width:1px;height:25px;flex-shrink:0"></span>
+
+
+        <!-- </div> -->
+   <!-- </article> -->
+    <!-- <div class="row pl-3"> -->
+        <div class="post_comment_div">
+        <!-- <div class="col-12 col-md-6 pl-0"> -->
          <h3 class="white-important mb-3">
-             Comments
+            <div class="white_margin">
+                Comments
+            </div>
 
          </h3>
+
+
         {% for comment in comments %}
+        
             <article class="media content-section">
                 <div style="width: 100%; word-break: break-all;" class="hovered-tweet-comment-in">
                 <div class="pb-2 row m-0" style="width: 100%; margin-right: 0 !important;">
@@ -76,16 +95,23 @@
                     <p>
                         {{ comment.content }}
                     </p>
-
+                <div class="date_size">
                     <small
                         class="white-important d-flex full-width flex-row-reverse">
                         {{ comment.date_posted | date:"H:i l, d.m.y" }}
                     </small>
+                </div>    
+                    
                 </a>
             </div>
             </article>
         {% endfor %}
-        </div>
+        <!-- </div> -->
+    </div>
+
+
+    <span style="display:block;width:1px;height:25px;flex-shrink:0"></span>
+
         {% if user is not None %}
             <div class="col-12 col-md-6 pl-0 pl-md-3 pr-3">
                 <h3 class="white-important mb-3">
@@ -102,6 +128,6 @@
                 </form>
             </div>
         {% endif %}
-    </div>
+    <!-- </div> -->
   </div>
 {% endblock contents %}

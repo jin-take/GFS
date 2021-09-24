@@ -1,57 +1,162 @@
-{% extends 'base.html' %}
-{% load static %}
 
+
+{% extends 'base.html' %}
 {% block contents %}
 
-    <div class="container">
-        <div class="page-header">
-            <h1>Welcome to ChatApp
-                <small>Pick a user and start chatting!</small>
-            </h1>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div id="user-list" class="list-group">
-                    <a href="" class="list-group-item disabled">
-                        <h4 class="list-group-item-heading">Users</h4>
-                        {# Users go here #}
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">Chat</h4>
-                    </div>
-                    <div>
-                        <ul id="messages" class="messages">
-                            {# Messages go here #}
-                        </ul>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="input-group">
-                            <input id="chat-input" type="text"
-                                   class="form-control input"
-                                   placeholder="Type your message here ..."
-                                   maxlength="500">
-                            <span class="input-group-btn">
-                            <button class="btn btn-info btn"
-                                    id="btn-send">
-                                Send</button>
-                        </span>
+<article class="MurMurMain_container">
+    <div class="Container_wide Container_common">
+        <div class="ContainerUndo">
+            <div class="MurMurMain_innner">
+                <div class="MurMurMain_stickyShare">
+                    <div class="MurMurMain_stickyShareInner">
+                        <div class="LikeButton_container styke-large-white count-bottom">
+                            <button class="LikeButton_button" aria-label="いいね">
+                                <svg viewBox="0 0 110 110" class="LikeButton_svgLike">
+                                    <path></path>
+                                    <path></path>
+                                    <g class="LikeButton_svgLikeDecoration">
+                                        <circle cx="41.5" cy="9.5" r="3.5" fill="#3ea8ff"></circle>
+                                    </g>
+                                </svg>
+                            </button>
+                            <span class="LIkeButton_likedCount">23</span>
                         </div>
+                        <span style="display:block;width:1px;height:0.5rem;flex-shrink:0"></span>
                     </div>
                 </div>
 
+                <div class="MurMurMain_columnsContainer">
 
+
+                   
+
+<!-- トークリスト -->
+                    <aside class="MurMurMain_sidebarContainer">
+                        <div class="MurMurSidebar_container">
+                            
+                            <div class="Container_default Container_common">
+                                <!--<div class="MurMurSidebar_post MurMurSidebar_sidebarCard">-->
+                                <!--</div>-->
+                            
+                                <div class="Communication_user_select">
+                                    <div class="Communication_list_box">
+
+                                        <div class="Communication_list_container">
+                                           
+                                            
+                                            <!-- <ul class="cp_list">
+                                                <li>
+                                                    <div class="Communication_devide_icon">
+                                                    <figure class="icon-img"><img src="{{ user.profile.image.url }}" class="rounded-circle img-thumbnail" alt="profile-image">
+                                                    わたる
+                                                    </div>
+                                                </li> -->
+                                                <div class="flex_1">
+                                                    <div class="icon_c"  a href="">
+                                                        <figure class="icon-img"><img src="{{ user.profile.image.url }}" class="rounded-circle img-thumbnail" alt="profile-image">
+                                                    </div>
+                                                        <div class="name_c">
+                                                            watarun
+                                                        </div>
+                                                   
+                                                </div>
+
+                                                <div class="flex_1">
+                                                    <div class="icon_c">
+                                                        <figure class="icon-img"><img src="{{ user.profile.image.url }}" class="rounded-circle img-thumbnail" alt="profile-image">
+                                                    </div>
+                                                    <div class="name_c">
+                                                            hamaguchi
+                                                    </div>
+                                                </div>
+                         
+                                            
+                                            <!-- </ul> -->
+                                        </div>
+                    
+                                    
+                                    </div>
+                                  
+                                    
+
+
+
+
+
+
+
+                                   
+                            </div>
+
+
+
+                             
+
+  
+                            </div>
+                        </div>
+                    </aside>
+                  
+
+
+
+
+
+
+
+
+<!-- Chat　画面 -->
+                    <!-- 右画面に分けてある -->
+                    <section class="Community_Main_content">
+                        watarun
+                        <!-- 左の吹き出し -->
+                        <div class="balloon-chat left">
+                          <figure class="icon-img"><img src="{{ user.profile.image.url }}" class="rounded-circle img-thumbnail" alt="profile-image">
+                            <!-- <figcaption class="icon-name">わたる</figcaption> -->
+                          </figure>
+                          <div class="chatting">
+                            <p class="chat-text">わたるです</p>
+                          </div>
+                        </div>
+                        <!-- 右の吹き出し -->
+                        <div class="balloon-chat right">
+                          <figure class="icon-img"><img src="{{ user.profile.image.url }}" class="rounded-circle img-thumbnail" alt="profile-image">
+                            <!-- <figcaption class="icon-name">わたるんるん</figcaption> -->
+                          </figure>
+                          <div class="chatting">
+                            <p class="chat-text">わたるんるんです<br>
+                            こんにちは</p>
+                          </div>
+                        </div>
+
+
+
+                <!-- <div class="flex_send"> -->
+                    <div class="cp_iptxt">
+                        <input type="text" placeholder=テキストを入力>
+                    </div>
+                <!-- </div> -->
+                    
+                    <div class="cp_img">
+                        <img src="..\media\send.png" a href="" width="30px" height="30px">    
+                    </div>
+
+                </section>
+                    
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        let sessionKey = '{{ request.session.session_key }}';
-        let currentUser = '{{ request.user.username }}';
-    </script>
-    <script src="{% static 'js/app.js' %}"></script>
+</article>
+
+
+
+
+
+
 
 {% endblock %}
+
+
+
