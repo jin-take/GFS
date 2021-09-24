@@ -476,3 +476,97 @@ aside{
     justify-content: space-between;
     display: flex;
 }
+
+ProfileSidebar_sticky {
+    position: sticky;
+    top: 30px;
+    max-height: calc(100vh-50px);
+    display: flex;
+    flex-direction: column;
+}
+
+.ProfileSidebar_user {
+    padding: 20px;
+}
+
+ProfileMain_container {
+    background: #fff;
+    padding-bottom: 4rem;
+}
+
+.ProfileMain_innner {
+    position: relative;
+}
+
+.ProfileMain_stickyShare {
+    display: none;
+    position: absolute;
+    left: -80px;
+    width: 50px;
+    height: 100%;
+}
+
+.ProfileMain_stickyShareInner {
+    position: sticky;
+    top: 100px;
+}
+
+.Profile_sticky {
+    position: sticky;
+    top: 100px;
+}
+
+.Profile_user {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px #797979;
+    padding: 20px;
+    top: 100px;
+}
+
+.ProfileSidebar_button {
+    background-color: #6600CD;
+    width: 180px;
+    height: 50px;
+    color: #FFFFFF;
+}
+
+.rounded-corner {
+    background-color: #D2C5F5;
+    width: 100px;
+    height: 100px;
+    color: #FFFFFF;
+    font-size: 24px;
+    border-radius: 100px;
+}
+
+.Profile_block_container {
+    padding: 10px;
+}
+
+.Profile_block_icon {
+    padding: 20px;
+}
+
+.Profile_user_comment {
+    background-color: #6600CD;
+    width: 750px;
+    height: 70px;
+    color: #FFFFFF;
+    box-shadow: 0 2px 4px #797979;
+    border-radius: .45em;
+}
+
+.Profile_user_skill {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    background-color: #D2C5F5;
+    font-size: 20px;
+    box-shadow: 0 2px 4px #797979;
+}
+
+.Profile_user_container {
+    padding: 10px 300px;
+    position: relative;
+}
