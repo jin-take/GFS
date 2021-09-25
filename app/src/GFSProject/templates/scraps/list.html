@@ -1,206 +1,57 @@
-
-
-<!-- InformationのHTMLです -->
-{% extends 'base.html' %}
-{% block contents %}
-​
+<!-- InformationのHTMLです -->{% extends 'base.html' %} {% block contents %} ​
 <div class="InfoMain_container">
     <div class="Container_wide Container_common">
-        <div class="ContainerUndo">
-            <div class="InfoMain_innner">
-                <div class="InfoMain_columnsContainer">
-
-                    <a href="{% url 'scraps:event_post' %}">イベント新規作成</a>
-                     <span style="display:block;width:auto;height:20px;flex-shrink:0"></span>
-                    <!-- <div class="row">-->
-                    <!-- <section class="SearchBoxMain_content">
-                        <div class="SearchBoxMain_main">
-                            <div class="Container_default Container_common_info">
-                                <div class="input-group rounded SearchboxSize">
-                                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                                    <button class="SearchButton_button" aria-label="さがす">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search SearchButton_svgLike" viewBox="0 0 16 16">
-                                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
+      <div class="ContainerUndo">
+        <div class="InfoMain_innner">
+          <div class="InfoMain_columnsContainer"> <a href="{% url 'scraps:event_post' %}">イベント新規作成</a> <span style="display:block;width:auto;height:20px;flex-shrink:0"></span> </div> <span style="display:block;width:auto;height:20px;flex-shrink:0"></span> ​
+          <!-- selsect LT or MokuMoku -->
+          <div class="SearchField_Left_Top">
+            <div class="SearchField_FieldName"> 講座・LT・もくもく </div>
+            <form action="{% url 'scraps:index' %}" method="post"> {% csrf_token %} <select name="category" class="form-control">
+                              <option selected value="講座">選択</option>
+                                  {% for category in categories %}
+                                      <option value="{{ category.name }}">{{ category.name }}</option>
+                                  {% endfor %}
+                          </select> <br> <input type="submit" value="更新"> </form>
+          </div>
+        </div>
+        </section>
+      </div>
+      <div class="InfoMain_columnsContainer">
+        <section>
+          <div class="SearchBoxMain_main">
+            <div class="Container_default Container_common"> Select Category Field </div>
+          </div>
+        </section>
+      </div> ​
+      <div class="InfoMain_columnsContainer">
+        <section class="SearchBoxMain_content">
+          <div class="SearchBoxMain_main">
+            <div class="Container_default Container_common">
+              <div> 一覧｜LT｜もくもく </div>
+              <div> Information List {% for event in events %}
+                <div class="card-deck">
+                  <div class="row"> ​
+                    <div class="col-sm-4">
+                      <div class="card h-100"> <img class="card-img-top" src="/media/event_pics/g0264.png" alt="ダミーテキスト">
+                        <div class="card-body">
+                          <a href="{% url 'scraps:event_detail' event.id %}">
+                            <h2 class="card-title">{{event.title}}</h2>
+                          </a>
+                          <p class="card-text">{{event.text}}</p>
+                          <p class="card-text bu"> 開催日: {{ event.date|date:"Y" }}年 {{ event.date|date:"n"}}月 {{ event.date|date:"j"}}日</a>
+                          </p>
                         </div>
-                    </section> -->
-                </div>
-​
-                <!-- <div class="InfoMain_columnsContainer">
-                    <section>
-                        <div class="SearchField_Left">
-                            <div class="SearchField_Left_Top"> -->
-                                <!-- <div class="SearchField_FieldName">
-                                    期間
-                                </div>
-                                <input type="text" name="name" class="form-control" id="search_field">
-​
-                                <span style="display:block;width:auto;height:20px;flex-shrink:0"></span> -->
-<!-- ​
-                                <select id="selectbox3" class="form-control">
-                                    <option selected value="spring">春</option>
-                                    <option value="summer">夏</option>
-                                    <option value="autumn">秋</option>
-                                    <option value="winter">冬</option>
-                                </select> -->
-                                <!--<div class="SearchField_FieldName">
-        2021/XX/XX～2021/XX/XX
-    </div>-->
-​
-                            <!-- </div> -->
-​
-
-
-
-
-
-                            <!-- <span style="display:block;width:auto;height:20px;flex-shrink:0"></span>
-                           
-                                <div class="SearchField_Left_Top">
-                                    <div class="SearchField_FieldName">
-                                        資格
-                                    </div>
-                                    <select id="selectbox2" class="form-control">
-                                        <option selected value="ITパスポート">ITパスポート</option>
-                                        <option value="情報セキュリティマネジメント">情報セキュリティマネジメント</option>
-                                        <option value="基本情報技術者">基本情報技術者</option>
-                                        <option value="その他">その他</option>
-                                    </select>
-                                </div>
-                        </div>
-                    </section>
-​
-                    <span style="display:block;width:20px;height:auto;flex-shrink:0"></span>
-​
-                    <section>
-                        <div class="SearchField_Left">
-                            <div class="SearchField_Left_Top">
-                                <div class="SearchField_FieldName">
-                                    職域・職種
-                                </div>
-                                <select id="selectbox2" class="form-control">
-                                    <option selected value="ITパスポート">ITパスポート</option>
-                                    <option value="情報セキュリティマネジメント">情報セキュリティマネジメント</option>
-                                    <option value="基本情報技術者">基本情報技術者</option>
-                                    <option value="その他">その他</option>
-                                </select>
-                            </div> -->
-​
-        
-        <span style="display:block;width:auto;height:20px;flex-shrink:0"></span>
-​
-        
-
-        <!-- selsect LT or MokuMoku -->
-        <div class="SearchField_Left_Top">
-            <div class="SearchField_FieldName">
-                講座・LT・もくもく
+                      </div>
+                    </div>
+                  </div>
+                </div> {% endfor %} </div>
             </div>
-                <form action="{% url 'scraps:index' %}" method="post">
-                    {% csrf_token %}
-                        <select name="category" class="form-control">
-                            <option selected value="講座">選択</option>
-                                {% for category in categories %}
-                                    <option value="{{ category.name }}">{{ category.name }}</option>
-                                {% endfor %}
-                        </select>
-                        <br>
-                    <input type="submit" value="更新">
-                </form>
-        </div>
-        
-
-
-
-    
+          </div>
+        </section>
+      </div>
     </div>
-            </section>
-        </div>
-
-
-                <div class="InfoMain_columnsContainer">
-                    <section>
-                        <div class="SearchBoxMain_main">
-                            <div class="Container_default Container_common">
-                                Select Category Field
-                            </div>
-                        </div>
-                    </section>
-                </div>
-​
-                <div class="InfoMain_columnsContainer">
-                    <section class="SearchBoxMain_content">
-                        <div class="SearchBoxMain_main">
-                            <div class="Container_default Container_common"> 
-                                <div>
-                                    一覧｜LT｜もくもく
-                                </div>
-                                <div> 
-                                    Information List
-                                    {% for event in events %}
-                                    <div class="card-deck">
-                                        <div class="row">
-​
-                                            <div class="col-sm-4">
-                                                <div class="card h-100">
-                                                    <img class="card-img-top" src="/media/event_pics/g0264.png" alt="ダミーテキスト">
-                                                    <div class="card-body">
-                                                        <a href="{% url 'scraps:event_detail' event.id %}"> 
-                                                        <h2 class="card-title">{{event.title}}</h2>
-                                                        </a>
-                                                        <p class="card-text">{{event.text}}</p>
-                                                        <p class="card-text bu">
-                                                                 開催日: {{ event.date|date:"Y" }}年 {{ event.date|date:"n"}}月 {{ event.date|date:"j"}}日</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-​
-{% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-                                            <!-- <div class="col-sm-4">
-                                                <div class="card h-100">
-                                                    <img class="card-img-top" src="/media/images/img2.jpg" alt="ダミーテキスト">
-                                                    <div class="card-body">
-                                                        <h2 class="card-title">タイトル2</h2>
-                                                        <p class="card-text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
-                                                        <p class="card-text bu"><a href="#">リンクテキスト</a></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-​
-                                            <div class="col-sm-4">
-                                                <div class="card h-100">
-                                                    <img class="card-img-top" src="/media/images/img3.jpg" alt="ダミーテキスト">
-                                                    <div class="card-body">
-                                                        <h2 class="card-title">タイトル3</h2>
-                                                        <p class="card-text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
-                                                        <p class="card-text bu"><a href="#">リンクテキスト</a></p>
-                                                    </div>
-                                                </div>
-                                            </div> -->
+  </div>
+  </div>
+  </div> ​ {% endblock %}
+ 
