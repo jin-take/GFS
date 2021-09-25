@@ -1,21 +1,13 @@
+![GFS top](https://github.com/jin237/GFS/blob/main/github_readme/logo/GFS_geekten(%E7%99%BA%E8%A1%A8%E7%94%A8)%20(1).jpg)
+
 # GFS(じーふす)　by Team KOCHODANI
-Information Processing Examinations Assistant Service<br>
-プロジェクト内容：情報系の資格取得を支援するためのコミュニティサイトの作成を行う
+情報系の資格取得を支援するためのナレッジコミュニティサイト
 
 # Members
-- Chief Executive Officer & Project Leader::<br>__じん__(https://github.com/jin237)
-- Front-end Engineer & Designer::<br>__さくら__(https://github.com/sakuraShimane)
-- Back-end Engineer & Infrastructure Engineer::<br>__わたる__(https://github.com/nodoka8)
-- Front-end Engineer & Back-end Engineer::<br>__もりもり__(https://github.com/OhyoriMasanobu)
-- Back-end Engineer & Infrastructure Engineer::<br>__えばちゃそ__(https://github.com/ebatyaso1228)
-
-
-### 現在の目標
-ユーザ1000人
-
-#### 進行状況
-下記のURLにて確認<br>
-https://github.com/jin237/Sea-Whale_project/projects/1
+- CEO & CTO - Infrastructure <br> __じん__(https://github.com/jin237)
+- CTO - Frontend<br>__えばちゃそ__(https://github.com/ebatyaso1228) <br> __さくら__(https://github.com/sakuraShimane)
+- DEO - Element Design<br>__もりもり__(https://github.com/OhyoriMasanobu)
+- CTO - Backend<br>__わたる__(https://github.com/nodoka8)
 
 
 ## Symbol Mark
@@ -27,6 +19,7 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 
 ## Concept
+![concept](https://github.com/jin237/GFS/blob/main/github_readme/logo/GFS_geekten(%E7%99%BA%E8%A1%A8%E7%94%A8)%20(4).jpg)
 ### 質問で繋がる、発想で共有、成長で最高の状態へ
 資格取得を目指すためには、知らないことを０、１から学ぶことが多い。独学では限界がある。
 入門者にとって難しいことは、ある程度の知識を持つものが教えること、または教え合うことで向上精神と成長を感じることができる。
@@ -36,26 +29,15 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 
 
 ## Contents
-- 気軽に投稿できるTwitterモデルの「__ムルムル(murmur)__」
-- イベントやTL会などを貼ることができる「__インフォメーション（information）__」
-- 一定のコミュニティを作ることができる「__コミュニティ(Community)__」
-- プロフィール
+#### MurMur(つぶやき)
+SNSのような手軽さで自分の質問したいことをTLに投稿できるようなもの．
 
-※今後変更の可能性あり
+#### Information（イベント）
+もくもく会やLT会などの自由にコミュニティを広げる場としての活用できるようなイベントを一覧で見ることができるもの．
+
 
 ## Frameworks, Developement Languages
-### Framework
-- Django(Python Framework)
-- Vue.js(JavaScript Framework)
-
-### Language
-- Python
-- JavaScript
-- HTML/CSS
-
-### Cloud Computing Service
-- Amazon Web Service (AWS)
-- Google Cloud Platform (GCP)
+![architecture](https://github.com/jin237/GFS/blob/main/github_readme/logo/GFS_geekten(%E7%99%BA%E8%A1%A8%E7%94%A8)%20(8).jpg)
 
 
 ## KOCHODANI Developmet Members Profiles
@@ -81,6 +63,7 @@ https://github.com/jin237/Sea-Whale_project/projects/1
 #### 画面遷移Roadmap
 <img src="https://github.com/jin237/GFS/blob/main/github_readme/GFS_Roadmap.png" height=300px>
 
+
 ## 環境構築手順
 https://daily-line-76f.notion.site/docker-compose-fb61da987ea94988a4cdaf66f7785a40  
 
@@ -96,71 +79,4 @@ https://mirror-summer-bcf.notion.site/Git-Git-Git-9a9417c1549d4a01b6dd4c0d3a88ac
 <img src="https://user-images.githubusercontent.com/57553474/125299744-65dab980-e364-11eb-95af-1bdbc352c747.png" height=300px>
 
 
-## 基本機能について
-基本的な機能については以下の５つの項目で行う．
-- murmur（ムルムル）
-- information（インフォメーション）
-- community（コミュニティ）
-- profile（プロフィール）
-それぞれについてのデザインの仮案と詳細機能について記述を行う．
-
-##### tempalte（おおもと）：
-__＜ヘッダー＞__
-```markdown
-  - アプリ名
-  - 時間
-  - アカウントアイコン
-  - ナビゲーション
-```
-
-
-__＜フッター＞__
-```markdown
-  - プライバシーポリシー
-  - マーク
-  - 会社（チーム）概要
-  - 機能説明
-```
-
-##### murmur（ムルムル）：
-```markdown
-- 投稿の本体
-	- アイコン
-	- ID
-	- 投稿時間
-- Nice（いいね）：数，色
-- React（反応）：数，色
-- Quote（引用）：数，色
-- リプライ（投稿本体）
-- 共有：リンク取得，埋め込み，報告，広告，アナリティクス，ヘルプ
-```
-
-##### community（コミュニティ）：
-```markdown
-- チャンネル
-- チャット本体：top image, ID
-- 投稿時間（送信時間）
-- コミュニティ名
-- コミュニティの説明
-- コミュニティルール
-- Nice（いいね）：数，色
-- React（反応）：数，色
-- Quote（引用）：数，色
-- 共有：リンク取得，コード引用，埋め込み，報告，広告，アナリティクス，ヘルプ
-```
-
-##### profile（プロフィール）：
-```markdown
-diaryと一緒，またはこれらを簡潔にまとめたものや，murmur, scraps, communityを含めたものになる．
-- top image
-- ID
-- 名前
-- DM機能ボタン
-- 投稿者についての説明
-- 属しているcommunity
-- murmur投稿一覧
-- scraps投稿一覧
-- community投稿一覧
-- 設定画面ボタン
-```
 
