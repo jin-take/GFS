@@ -50,7 +50,8 @@ class User(AbstractBaseUser, PermissionsMixin):
         _('staff status'),
         default=False,
         help_text=_(
-            'Designates whether the user can log into this admin site.'),
+            'Designates whether the user can log into this admin site.'
+        ),
     )
     is_active = models.BooleanField(
         _('active'),
@@ -89,7 +90,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     @property
     def username(self):
         """username属性のゲッター
-
         他アプリケーションが、username属性にアクセスした場合に備えて定義
         メールアドレスを返す
         """
@@ -104,7 +104,7 @@ class Certifications(models.Model):
 
 
 class Profile(models.Model):
-    
+
     user = models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     name = models.CharField("ハンドルネーム", max_length=255)
     image = models.ImageField(blank=True, upload_to='profile_pics',default='default.png')
@@ -116,7 +116,6 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.name
-
 
     @property
     def followers(self):
@@ -135,12 +134,12 @@ class Profile(models.Model):
             img.thumbnail(output_size)
             img.save(self.image.path)
 
+
 @receiver(post_save, sender=User)
 def create_profile(sender, **kwargs):
     """ 新ユーザー作成時に空のprofileも作成する """
     if kwargs['created']:
         user_profile = Profile.objects.get_or_create(user=kwargs['instance'])
-
 
 
 class Follow(models.Model):

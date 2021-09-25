@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -9,18 +9,20 @@ body {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.5;
-    /*    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-*/
+    /*font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
     font-family: 'Jua', 'Kiwi Maru', sans-serif, serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    /*    font-family: 'Jua', sans-serif, 'Kiwi Maru', serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-*/ /*    font-family: Jua, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 'Jua', sans-serif;
-*/
+    /*
+    font-family: 'Jua', sans-serif, 'Kiwi Maru', serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Jua, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 'Jua', sans-serif;
+    */
 }
 
 .container {
     width: 80%;
-    /*    height: 100%;
-    background-color: white;*/
+    /*    
+    height: 100%;
+    background-color: white;
+    */
     display: flex;
 }
 
@@ -28,6 +30,7 @@ header {
     margin: 0;
     padding: 0;
 }
+
 .nav-item nav-link {
     background-color: aqua;
     justify-content: center;
@@ -36,9 +39,10 @@ header {
 .navbar{
     margin: 0;
     padding: 0;
-
-/*   background-color:white;
-    background-color:#6600CD;*/
+    /*  
+    background-color:white;
+    background-color:#6600CD;
+    */
 }
 
 .card-box {
@@ -102,14 +106,15 @@ h4 {
 
 p.font {
     font-family: 'Jua', 'Kiwi Maru', sans-serif, serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    /*    font-family: Jua, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-*/ /*    font-family: Jua,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 'Jua', sans-serif;
-*/
+    /* 
+    font-family: Jua, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Jua,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 'Jua', sans-serif;
+    */
 }
 
 li {
     list-style: none;
-/*    background-color: #73BDFA;*/ 
+    /*background-color: #73BDFA;*/ 
     padding: 10px;
     margin: 2px
 }
@@ -123,14 +128,16 @@ ul.navbar-nav li {
     justify-content: center;
 }
 
-ul.navbar-nav li.selected {
+ul.navbar-nav a.selected {
     background-color:  #6600CD;
 }
 
-/*.flex {
+/*.
+flex {
     display: flex;
     justify-content: center;
-}*/
+}
+*/
 
 wrap{
     padding: 15px 0;
@@ -169,6 +176,11 @@ a:hover{
     padding: 40px;
 }
 
+.Container_common_info {
+    margin: 0 auto;
+    padding: 10px;
+}
+
 .MurMurMain_innner{
     position: relative;
 }
@@ -191,6 +203,11 @@ a:hover{
     align-items: center;
 }
 
+.LikeButton_container.count-bottom {
+    display: block;
+    text-align: center;
+    }
+
 .LikeButton_container.count-bottom{
     display: block;
     text-align: center;
@@ -202,7 +219,20 @@ a:hover{
     box-shadow: 0 2px 3px -1px;
 }
 
+.SearchButton_button {
+    padding: 5px;
+    color: #6600cd;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #ced4da;
+}
+
 .LikeButton_svgLike{
+    width: 30px;
+    height: 30px;
+}
+
+.SearchButton_svgLike {
     width: 30px;
     height: 30px;
 }
@@ -224,8 +254,17 @@ a:hover{
     justify-content: center;
 }
 
+.InfoMain_columnsContainer {
+    display: flex;
+    justify-content: center;
+}
+
 .TweetsMain_content{
     width: calc(100% - 330px);
+}
+
+.SearchBoxMain_content {
+    width: calc(100% - 3em);
 }
 
 .TweetsMain_main{
@@ -236,7 +275,17 @@ a:hover{
     font-size: 16px;
 }
 
+.SearchBoxMain_main {
+    background: #fff;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
 .Container_default{
+    max-width: 960px;
+}
+
+.Container_default {
     max-width: 960px;
 }
 
@@ -293,20 +342,21 @@ aside{
     padding: 25px 20px 25px;
     color: #fff;
     background: #6600cd;
-    border-color: cornflowerblue;
+    border-style: none;
     border-radius: .45em;
+    text-decoration:none; 
 }
 
 .Button_baseStyle{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    line-height: 1.4;
     cursor: pointer;
     text-align: center;
     white-space: nowrap;
     border-radius: .45em;
     border: 1px solid #0000;
+    text-decoration: none;;
 }
 
 .MurMurSidebar_sticky{
@@ -365,12 +415,6 @@ aside{
     font-size: 20px;
 }
 
-.SidebarUserBio_follower{
-    
-}
-.SidebarUserBio_following{
-    
-}
 
 .Tweets_block{
     width: 100%;
@@ -405,7 +449,6 @@ aside{
 }
 
 .Tweets_blockUserName {
-    
     display: block;
     font-size: 2rem;
     color: black;
@@ -474,3 +517,434 @@ aside{
     justify-content: space-between;
     display: flex;
 }
+
+.SearchField_Left {
+    text-align: center;
+    justify-content: center;
+}
+
+.SearchField_Left_Top {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    justify-content: center;
+}
+
+.SearchField_FieldName {
+    display: block;
+    font-size: 1rem;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.SearchboxSize {
+    width: calc(100%-1.5em);
+}
+
+.select_shikaku{
+    display: flex;
+    height: 2rem;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.select_shikaku > li {
+    width: 25%;
+}
+
+.select_shikaku li {
+    list-style: none;
+    position: relative;
+}
+
+.select_shikaku li a {
+    background: #001b34;
+    border-right: 1px solid #eee;
+    color: #fff;
+    display: block;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.select_shikaku li li {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.select_shikaku li li a {
+    border-top: 1px solid #eee;
+}
+
+.select_shikaku li:hover > ul > li {
+    height: 2rem;
+    overflow: visible;
+}
+
+.SearchField_Main{
+    width: 2rem;
+}
+
+
+ProfileSidebar_sticky {
+    position: sticky;
+    top: 30px;
+    max-height: calc(100vh-50px);
+    display: flex;
+    flex-direction: column;
+}
+
+.ProfileSidebar_user {
+    padding: 20px;
+}
+
+ProfileMain_container {
+    background: #fff;
+    padding-bottom: 4rem;
+}
+
+.ProfileMain_innner {
+    position: relative;
+}
+
+.ProfileMain_stickyShare {
+    display: none;
+    position: absolute;
+    left: -80px;
+    width: 50px;
+    height: 100%;
+}
+
+.ProfileMain_stickyShareInner {
+    position: sticky;
+    top: 100px;
+}
+
+.Profile_sticky {
+    position: sticky;
+    top: 100px;
+}
+
+.Profile_user {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px #797979;
+    padding: 20px;
+    top: 100px;
+}
+
+.ProfileSidebar_button {
+    background-color: #6600CD;
+    width: 180px;
+    height: 50px;
+    color: #FFFFFF;
+}
+
+.rounded-corner {
+    background-color: #D2C5F5;
+    width: 100px;
+    height: 100px;
+    color: #FFFFFF;
+    font-size: 24px;
+    border-radius: 100px;
+}
+
+.Profile_block_container {
+    padding: 10px;
+}
+
+.Profile_block_icon {
+    padding: 20px;
+}
+
+.Profile_user_comment {
+    background-color: #6600CD;
+    width: 750px;
+    height: 70px;
+    color: #FFFFFF;
+    box-shadow: 0 2px 4px #797979;
+    border-radius: .45em;
+}
+
+.Profile_user_skill {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    background-color: #D2C5F5;
+    font-size: 20px;
+    box-shadow: 0 2px 4px #797979;
+}
+
+.Profile_user_container {
+    padding: 10px 300px;
+    position: relative;
+}
+
+
+/* Community */
+
+
+.balloon-chat {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* 左の吹き出し */
+.balloon-chat.left { 
+    text-align: left; 
+    flex-direction: row; /* 左から右に並べる */
+}
+/* 右の吹き出し */
+.balloon-chat.right { 
+    text-align: right; 
+    flex-direction: row-reverse; /* 右から左に並べる */
+}
+/* 吹き出しの入力部分の作成 */
+.chatting {
+    position: relative;
+    display: inline-block; /* 吹き出しが文字幅に合わせます */ 
+    margin: 10px 20px;
+    padding: 10px 20px;
+    background: #ccffcc; 
+    text-align: left; 
+    border-radius: 12px; 
+}
+/* 吹き出しの三角部分の作成 */
+.chatting::after {
+    content: "";
+    border: 15px solid transparent;
+    border-top-color: #ccffcc; 
+    position: absolute;
+    top: 10px; 
+}
+.left .chatting::after {
+    left: -15px; 
+}
+.right .chatting::after {
+    right: -15px; 
+} 
+/* アイコンの作成 */
+.balloon-chat figure img {
+    border-radius: 50%; 
+    border: 2px solid #333300; 
+    margin: 0;
+}
+/* アイコンの大きさ */
+.icon-img {
+    width: 80px;
+    height: 80px;
+}
+/* アイコンの名前の設定 */
+.icon-name {
+    width: 80px; /* アイコンの大きさと合わせる */
+    font-size: 12px;
+    text-align: center;
+}
+
+.Community_Main_content{
+    width: calc(100% - 330px);
+    height: calc(100% - 10%);
+    background-color: #ddd2fc;
+    height: 100%;
+    
+}
+
+.Communication_user_select{
+    flex-direction: row; 
+}
+
+.Communication_list_box{
+    width: 100%;
+    height: 100%;
+}
+
+.Community_Container_common{
+    margin:0 auto;
+    padding: 40px;
+}
+
+ul.cp_list {
+    position: relative;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    list-style-type: none;
+}
+
+ul.cp_list li {
+    display: flex;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    /* margin-bottom: 5px; */
+    line-height: 3.5;
+    /* vertical-align: middle; */
+    background: #D2C5F5;
+    border-radius: 20px 20px 20px 20px;
+    color: #3b47ad;
+    width: 280px;
+}
+
+.Communication_list_container{
+    padding: 10%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px #797979;
+    /* display: ; */
+}
+
+
+.flex_1{
+    display: flex;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    border: solid 3px #000000;
+}
+
+.flex_1:hover {
+    background-color: #D2C5F5;
+    }
+
+.flex_1:active {
+    background-color: #8e3ce0;
+    }
+
+    a:visited {
+    color: #4c00ff;
+    }
+
+.icon_c{
+    text-align: left;
+}
+
+.name_c{
+    text-align: left;
+
+}
+
+
+
+.cp_iptxt input[type='text'] {
+    /* font: 15px/24px sans-serif; */
+    /* box-sizing: border-box;  */
+    width: 80%;
+    padding: 0.3em;
+    /* transition: 0.3s; */
+    letter-spacing: 1px;
+    /* color: #000000; */
+    /* border: 1px solid #1b2538; */
+    /* border-radius: 4px; */
+    margin: 15px;
+    float:left;
+}
+
+
+.flex_send{
+    display: flex;
+}
+
+/* .send_image{text-align: center;} */
+
+.cp_img{
+    float:left;
+    margin: 20px 0px 0px 0px;
+}
+
+
+.container_post {
+    margin: 10%;
+    width: 80%;
+    /*    height: 100%;
+    background-color: white;*/
+
+}
+
+.user_post_div{
+    box-shadow: 0 3px 5px #797979;
+    width: 90%;
+
+
+}
+
+.post_comment_div{
+    box-shadow: 0 3px 5px #797979;
+    width: 90%;
+
+}
+
+.date_size{
+    font-size: 16px;        
+
+}
+
+.btn-outline-primary {
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #6d6be2;/*色*/
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    font-weight: bold;    
+}
+    
+.white_margin{
+    margin: 0px 0px 0px 10px;
+}
+
+.post_comment_div{
+    box-shadow: 0 3px 5px #797979;
+    width: 90%;
+
+}
+
+.container_post {
+    margin: 10%;
+    width: 80%;
+    /*    height: 100%;
+    background-color: white;*/
+
+}
+
+.user_post_div{
+    box-shadow: 0 3px 5px #797979;
+    width: 90%;
+
+
+}
+
+.post_comment_div{
+    box-shadow: 0 3px 5px #797979;
+    width: 90%;
+
+}
+
+.date_size{
+    font-size: 16px;        
+
+}
+
+
+
+.btn-outline-primary {
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #6d6be2;/*色*/
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+
+}
+
+.white_margin{
+    margin: 0px 0px 0px 10px;
+}
+
+.post_comment_div{
+    box-shadow: 0 3px 5px #797979;
+    width: 90%;
+} 

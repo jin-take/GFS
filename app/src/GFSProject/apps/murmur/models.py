@@ -38,4 +38,4 @@ class Preference(models.Model):
         return str(self.user) + ':' + str(self.post) +':' + str(self.value)
 
     class Meta:
-       unique_together = ("user", "post", "value")
+        unique_together = ("user", "post", "value")
