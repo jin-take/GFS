@@ -12,7 +12,7 @@
 
                     <a href="{% url 'scraps:event_post' %}">イベント新規作成</a>
                      <span style="display:block;width:auto;height:20px;flex-shrink:0"></span>
-                    <!--<div class="row">-->
+                    <!-- <div class="row">-->
                     <!-- <section class="SearchBoxMain_content">
                         <div class="SearchBoxMain_main">
                             <div class="Container_default Container_common_info">
@@ -89,62 +89,55 @@
                                 </select>
                             </div> -->
 ​
-                            <span style="display:block;width:auto;height:20px;flex-shrink:0"></span>
+        
+        <span style="display:block;width:auto;height:20px;flex-shrink:0"></span>
 ​
-                            <div class="SearchField_Left_Top">
-                                <div class="SearchField_FieldName">
-                                    講座・LT・もくもく
-                                </div>
+        
 
-                             
-                                <form action="{% url 'scraps:index' %}" method="post">
-                                    {% csrf_token %}
-                                <select name="category" class="form-control">
-                                    <option selected value="講座">選択</option>
-                                    {% for category in categories %}
+        <!-- selsect LT or MokuMoku -->
+        <div class="SearchField_Left_Top">
+            <div class="SearchField_FieldName">
+                講座・LT・もくもく
+            </div>
+                <form action="{% url 'scraps:index' %}" method="post">
+                    {% csrf_token %}
+                        <select name="category" class="form-control">
+                            <option selected value="講座">選択</option>
+                                {% for category in categories %}
                                     <option value="{{ category.name }}">{{ category.name }}</option>
-                                    {% endfor %}
-                                </select>
-                                <br>
-                                <input type="submit" value="更新">
-                              </form>
-                                
-
-
-            
+                                {% endfor %}
+                        </select>
+                        <br>
+                    <input type="submit" value="更新">
+                </form>
+        </div>
+        
 
 
 
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <!--<hr color="#FF9933">-->
+    
+    </div>
+            </section>
+        </div>
+
+
                 <div class="InfoMain_columnsContainer">
                     <section>
                         <div class="SearchBoxMain_main">
                             <div class="Container_default Container_common">
-                                <!--<h3>-->
                                 Select Category Field
-                                <!--</h3>-->
-                                
                             </div>
                         </div>
-​
                     </section>
-​
-​
                 </div>
 ​
                 <div class="InfoMain_columnsContainer">
-                    <!--<div class="row">-->
                     <section class="SearchBoxMain_content">
                         <div class="SearchBoxMain_main">
                             <div class="Container_default Container_common"> 
                                 <div>
                                     一覧｜LT｜もくもく
                                 </div>
-​
                                 <div> 
                                     Information List
                                     {% for event in events %}
@@ -153,14 +146,13 @@
 ​
                                             <div class="col-sm-4">
                                                 <div class="card h-100">
-                                                    <img class="card-img-top" src="/{{event.image}}" alt="ダミーテキスト">
+                                                    <img class="card-img-top" src="/media/event_pics/g0264.png" alt="ダミーテキスト">
                                                     <div class="card-body">
                                                         <a href="{% url 'scraps:event_detail' event.id %}"> 
                                                         <h2 class="card-title">{{event.title}}</h2>
                                                         </a>
                                                         <p class="card-text">{{event.text}}</p>
                                                         <p class="card-text bu">
-                                                            <!-- <a href="#"> -->
                                                                  開催日: {{ event.date|date:"Y" }}年 {{ event.date|date:"n"}}月 {{ event.date|date:"j"}}日</a></p>
                                                     </div>
                                                 </div>
@@ -168,11 +160,7 @@
                                         </div>
                                     </div>
                                     {% endfor %}
-
-                                    
-
                                 </div>
-​
                             </div>
                         </div>
                     </section>
