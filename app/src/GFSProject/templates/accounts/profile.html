@@ -3,6 +3,162 @@
 <li>
     <a class="nav-item nav-link" href="{% url 'profile_update' pk=user.profile.pk %}">ユーザー情報更新</a>
 </li>
+
+<article class="ProfileMain_container">
+    <div class="Container_wide Container_common">
+        <div class="ContainerUndo">
+            <div class="ProfileMain_innner">
+                <div class="ProfileMain_stickyShare">
+                    <div class="ProfileMain_stickyShareInner">
+                    
+                    </div>
+                </div>
+
+                <div class="Profile_sticky">
+                    <div class="Profile_user">
+                        <div class="Profile_title">
+                            <!--Profile-->
+                        </div>
+
+                        <div class="SidebarUserBio_follow">
+                            <div class="SidebarUserBio_follower">
+                                <div class="Sidebar_followName">
+                                    Follower
+                                </div>
+
+                                <button class="rounded-corner">
+                                    <div>
+                                        <a href="{% url 'murmur:user-followers' user.profile.name %}">
+                                            <h3 class="white-important follow-click">
+                                                {{ user.profile.followers }}
+                                            </h3>
+                                        </a>
+                                    </div>
+                                </button>
+                            </div>
+
+                            <div class="SidebarUserBio_following">
+                                <div class="Sidebar_followName">
+                                    Following
+                                </div>
+
+                                <button class="rounded-corner">
+                                    <div>
+                                        <a href="{% url 'murmur:user-follows' user.profile.name %}">
+                                            <h3 class="white-important follow-click">
+                                                {{ user.profile.following }}
+                                            </h3>
+                                        </a>
+                                    </div>
+
+                                </button>
+
+                            </div>
+                            <div class="SidebarUserBio_container">
+                                <a href="#">
+                                    <img src="{{ user.profile.image.url }}" class="rounded-circle img-thumbnail" alt="profile-image">
+
+                                </a>
+                            </div>
+
+                            <div class="Profile_block_container">
+                                <button class="ProfileSidebar_button Button_baseStyle" 　href="{% url 'murmur:murmur_post' %}">
+                                    フォローする
+                                </button>
+
+                                <div class="Profile_block_icon">
+                                    <img src="/media/profile_pics/Qiita_icon.png" class="rounded-circle" alt="Qiita-image" width="50" height="50">
+
+                                    <img src="/media/profile_pics/GitHub_icon.png" class="rounded-circle" alt="GitHub-image" width="50" height="50">
+
+                                    <img src="/media/profile_pics/Twitter_icon.png" class="rounded-circle" alt="Twitter-image" width="50" height="50">
+
+                                </div>
+
+                            </div>
+
+                            <div class="SidebarUserBio_user">
+                                <div class="SidebarUserBio_name">
+                                    {{ user.profile.name }}
+                                </div>
+                                <div class="SidebarUserBio_email">
+                                    {{ user.email }}
+                                </div>
+                            </div>
+
+                            <div class="Profile_user_comment">
+                                <th>{{ user.profile.introduce }}</th>
+                            </div>
+
+                            <span style="display:block;width:1px;height:25px;flex-shrink:0"></span>
+
+                        </div>
+
+                        <div class="Profile_user_container">
+                            
+                                <div class="Profile_user_skill">
+                                    <!-- <th>基本情報技術者試験</th> -->
+                                    <p class="mb-4" >
+                                        {{ user.profile.desiredqualification }}
+                                    </p>
+                                </div>
+
+                                <div class="Profile_user_skill">
+                                    <p class="mb-4" ><td>
+                                        {{ user.profile.get_certified  }}
+                                    </td></p>
+                                </div>
+
+                                <div class="Profile_user_skill">
+                                    <th>ITパスポート</th>
+                                </div>
+
+
+                        </div>
+                            
+                        <!-- <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>メールアドレス</th>
+                                    <td>{{ user.email }}</td>
+                                </tr>
+                                <tr>
+                                    <th>姓</th>
+                                    <td>{{ user.last_name }}</td>
+                                </tr>
+                                <tr>
+                                    <th>名</th>
+                                    <td>{{ user.first_name }}</td>
+                                </tr>
+                                <tr>
+                                    <th>画像</th>
+                                    <td><img src="{{ user.profile.image.url }}" width="100" height="100" /></td>
+                                <tr>
+                                    <th>name</th>
+                                    <td>{{ user.profile.name }}</td>
+                                </tr>
+                                <tr>
+                                    <th>自己紹介</th>
+                                    <td>{{ user.profile.introduce }}</td>
+                                </tr>
+                            </tbody>
+                        </table> -->
+
+
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</article>
+{% endblock %}
+
+
+
+
+<!-- <li>
+    <a class="nav-item nav-link" href="{% url 'profile_update' pk=user.profile.pk %}">ユーザー情報更新</a>
+</li>
 <table class="table">
     <tbody>
         <tr>
@@ -29,5 +185,4 @@
             <td>{{ user.profile.introduce }}</td>
         </tr>
     </tbody>
-</table>
-{% endblock %}
+</table> -->

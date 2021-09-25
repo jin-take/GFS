@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.dispatch import receiver
 from django.db.models.signals import post_save, pre_save
 import os.path
+from PIL import Image
 
 class Tag(models.Model):
     name = models.CharField(max_length=20)
@@ -18,7 +19,17 @@ class Event(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE, null=True, blank=True)  # ...2
     tag = models.ManyToManyField(Tag, blank=True)  # ...3
     del_flag = models.BooleanField(default=False)  # ...4
-    image = models.ImageField(blank=True, upload_to='event_pics')
+    image = models.ImageField(blank=True, upload_to='event_pics',default='default.png')
+
+
+    def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
+        super().save()
+
+        img = Image.open(self.image.path)
+        if img.height > 300 or img.width > 300:
+            output_size = (300, 300)
+            img.thumbnail(output_size)
+            img.save(self.image.path)
 
 
     def __str__(self):

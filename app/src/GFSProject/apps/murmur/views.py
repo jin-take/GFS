@@ -18,7 +18,6 @@ from rest_framework import status
 from django.conf import settings
 from django.urls import reverse_lazy
 
-
 PAGINATION_COUNT = 10
 #User = settings.AUTH_USER_MODEL
 
